@@ -26,7 +26,7 @@ This app does not require Internet for its basic functioning. However, if Intern
 __How can I run it?__
 This app when opened directly in a browser (double-click on spa.html file), works in read-only mode, that means you cannot edit anything. This is because browsers do not allow writing to the local file system for all security reasons. 
 
-To enable editing, this app uses [node-webkit](https://github.com/rogerwang/node-webkit) app shells for Windows, Mac and Linux platforms. Each of these are available in respective folders and can be opened using given startup program, e.g., 'spa.exe' under Windows folder. When app is opened using any of these provided shell, it enables all the editing features.
+To enable editing, this app uses [node-webkit](https://github.com/rogerwang/node-webkit) app shells for Windows, Mac and Linux platforms. Depending upon the platform you are, you can use required command-line shell script. E.g, spa-win.bat for Windows OS.  When app is opened using any of these provided shell, it enables all the editing features.
 
 **Notes:** 
 1. When running first time, you must run it using given startup program, so that it can create your default data file.
