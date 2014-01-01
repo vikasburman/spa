@@ -5,6 +5,9 @@ A simple, smart, secure, and sufficient portable app to store all your passwords
 
 This one is a single page app, literally. There is only one file "spa.html" that has it all and it runs locally on any new age browser (Google Chrome, FireFox, Safari, IE 10). 
 
+__How do I install it?__
+To start using, [download the latest release](https://github.com/vikasburman/spa/releases/tag/v0.9.0), unzip it in any local folder or flash drive and start using right away by opening the app using OS specific startup shell script (e.g., spa-win.bat on Windows OS).
+
 __What I can do with this?__
 The sole purpose of this app is to store access information to various digital assets that everyone of us has in abundance nowadays. Along with storing passwords (and history of it) it also has provision to store all associated information that comes with it. E.g., account, access url, security questions (and answers), and dated notes to name a few. Check out the given demo file to get ideas.
 
@@ -29,9 +32,6 @@ This app when opened directly in a browser (double-click on spa.html file), work
 To enable editing, this app uses [node-webkit](https://github.com/rogerwang/node-webkit) app shells for Windows, Mac and Linux platforms. Depending upon the platform you are, you can use required command-line shell script. E.g, spa-win.bat for Windows OS.  When app is opened using any of these provided shell, it enables all the editing features.
 
 **Note:** When running first time, you must run it using given startup program, so that it can create your default data file. Also note that a new default file's password is always set to be 1234, irrespective of whatever you define. This can later be changed using Settings.
-
-__How do I install it?__
-To start using, [download the latest release](https://github.com/vikasburman/spa/releases/tag/v0.9.0), unzip it in any local folder or flash drive and start using right away by opening the app using OS specific startup shell script (e.g., spa-win.bat on Windows OS).
 
 
 Have more queries? Send me a mail at [me@vikasburman.com](mailto:me@vikasburman.com).
