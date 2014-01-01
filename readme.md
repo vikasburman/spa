@@ -28,11 +28,7 @@ This app when opened directly in a browser (double-click on spa.html file), work
 
 To enable editing, this app uses [node-webkit](https://github.com/rogerwang/node-webkit) app shells for Windows, Mac and Linux platforms. Depending upon the platform you are, you can use required command-line shell script. E.g, spa-win.bat for Windows OS.  When app is opened using any of these provided shell, it enables all the editing features.
 
-**Notes:** 
-
-1. When running first time, you must run it using given startup program, so that it can create your default data file. 
-
-2. A new default file's password is always set to be 1234, irrespective of whatever you define. This can later be changed using Settings.
+**Note:** When running first time, you must run it using given startup program, so that it can create your default data file. Also note that a new default file's password is always set to be 1234, irrespective of whatever you define. This can later be changed using Settings.
 
 __How do I install it?__
 To start using, [download the latest release](https://github.com/vikasburman/spa/releases/tag/v0.9.0), unzip it in any local folder or flash drive and start using right away by opening the app using OS specific startup shell script (e.g., spa-win.bat on Windows OS).
