@@ -34,4 +34,28 @@ To start using, download all the content locally, copy in any local folder or fl
 Do not delete local 'data' folder, even if you are not using it. It contains demo.pjs, which you may want to use to show off to your friends. :)
 
 Have more queries? Send me a mail at [me@vikasburman.com](mailto:me@vikasburman.com).
- 
+
+
+Release Notes
+===
+__27-Jul-2013: Release 0.0.1 (Initial release)__
+
+1. Initial release for over the shoulder alpha testing.
+2. Was not on github then.
+
+
+__07-Sep-2013: Release 0.4.9 (Closed Beta)__
+
+1. Initial release for closed beta among hand-picked folks.
+2. Was not on github then.
+
+
+__01-Jan-2014: Release 0.9.0 (Public Beta)__
+
+1. Initial public release. 
+2. Windows startup program spa.exe is configured and functioning.
+3. Linux and Mac platforms are not configured as yet.
+4. Mobile browsers are not tested yet.
+5. Latest versionf of Internet Explorer, FireFox, Google Chrome and Safari are tested.
+
+
