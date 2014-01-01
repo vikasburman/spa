@@ -304,6 +304,8 @@
 			this.saveFile = function(completeFilePath, fileContent) {
 				var isSuccess = false;
 				try {
+					completeFilePath = (completeFilePath.substring(0, 1) === "/" ? 
+										completeFilePath.substring(1) : completeFilePath);
 					fs.writeFileSync(completeFilePath, fileContent);
 					isSuccess = true;
 				} catch (ex) {
@@ -1398,7 +1400,7 @@
 				dataFileExtension: "pjs",
 				stateKey: "spa",
 				demoDataFile: "demo",
-				demoDataFilePassword: "0000",
+				demoDataFilePassword: "1234",
 				dataFolder: "data",
 				dataFileRootObject: "spaData",
 			};
@@ -1530,7 +1532,7 @@
 									// define default
 									$("#dataFile").val(dataFile);
 									$("#dataFileTitle").val("My Passwords");
-									$("#pwd").val("0000");
+									$("#pwd").val("1234");
 									dataFileType = 'new';
 									onDataFileDefine();
 									return;
@@ -3319,7 +3321,7 @@
 						<div class="span4" align="right">
 							<div id="giftSign" title="This copy of the application is personally signed by Vikas for you.">
 							</div>
-							<small><small id="viewOnly2" class="hide" style="color: red;" title="To enable editing, open via given startup program as per operation system (Windows, Max or Linux)">Read Only</small></small>
+							<small><small id="viewOnly2" class="hide" style="color: red;" title="To enable editing, open via given startup program as per operation system (Windows, Max or Linux)">(Read-only mode)</small></small>
 						</div>
 						<div class="span2">
 						</div>
@@ -3843,7 +3845,7 @@
 					</div>
 					<div id="noEncryptionMessage" class="alert alert-error hide">
 					  <b>Warning!</b> Your passwords are set to store as unencrypted. For secure storage, 
-					  change <i>Data File > Encryption</i> setting below to <i>Yes</i>.
+					  change <i>File > Encryption</i> setting below to <i>Yes</i>.
 					</div>
 					<div class="btn-group pull-right">
 					  <button id="saveSettings" class="btn btn-large btn-success" title="Save changes in data file">Save</button>

@@ -1,6 +1,6 @@
 spaData = {
 	settings: {
-		title: "Vikas PWD",
+		title: "Demo Passwords",
 		pin: "1234",
 		encrypt: "no",
 		searchDepth: "",
