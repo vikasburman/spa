@@ -29,6 +29,7 @@ This app when opened directly in a browser (using spa.html), works in read-only 
 
 To enable editing, this app uses [node-webkit](https://github.com/rogerwang/node-webkit) app shells for Windows, Mac and Linux platforms. Each of these are available in respective folders and can be opened using given startup program, e.g., 'spa.exe' under Windows folder. When app is opened using any of these provided shell, it enables all the editing features.
 
+**Note: When running first time, you must run it using given startup program, so that it can create your default data file.**
 
 To start using, download all the content locally, copy in any local folder or flash drive and start using right away.
 Do not delete local 'data' folder, even if you are not using it. It contains demo.pjs, which you may want to use to show off to your friends. :)
