@@ -21,11 +21,13 @@ All this information is stored in a plain text file that you can choose to store
 By default, all your information is stored in plain text without any encryption, so anyone can see it if they get access to your file. BUT, you have an option to use standard and secure [AES algorithm](http://en.wikipedia.org/wiki/Advanced_Encryption_Standard) to encrypt all this information using your password itself. So only you who will know the password will be able to see decrypted information. 
 
 
-This app does not require Internet for its basic functioning. However, if Internet is available, it can use if to show the icon of the website and you can navigate to the website from within. Additionally you can check of any available update of the app. 
+This app does not require Internet for its basic functioning. However, if Internet is available, it can use it to show the icon of the website and you can navigate to the website from within. Additionally having Internet, you can check for any available updates of this app. 
 
-No information from your file is *ever* transferred to any website whatsoever. This can be verified in the app code.
+**No information from your data file is *ever* transferred to any website whatsoever. This can be verified in the app code.**
 
-This app when opened in a browser, it works in read-only mode, that means you cannot edit anything. This is because browsers do not allow writing to the local file system for all security reasons. To enable editing, this app uses [node-webkit](https://github.com/rogerwang/node-webkit) app shells for Windows, Mac and Linux platforms. Each of these are available in respective folders and can be opened using given startup program, e.g., 'spa.exe' under Windows folder.
+This app when opened directly in a browser (using spa.html), works in read-only mode, that means you cannot edit anything. This is because browsers do not allow writing to the local file system for all security reasons. 
+
+To enable editing, this app uses [node-webkit](https://github.com/rogerwang/node-webkit) app shells for Windows, Mac and Linux platforms. Each of these are available in respective folders and can be opened using given startup program, e.g., 'spa.exe' under Windows folder. When app is opened using any of these provided shell, it enables all the editing features.
 
 
 Have more queries? Send me a mail at [me@vikasburman.com](mailto:me@vikasburman.com).
