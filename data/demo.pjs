@@ -1,0 +1,94 @@
+spaData = {
+	settings: {
+		title: "Vikas PWD",
+		pin: "1234",
+		encrypt: "no",
+		searchDepth: "",
+		lastUpdate: "2013/12/31 14:50:36",
+		appVersionId: "1",
+		dataFormatVersionId: "1",
+		passwordTypes: [
+			"Login",
+			"Transaction",
+			"PIN",
+			"TIN",
+		],
+		categories: [
+			{
+				id: "a837d30e-2584-c67c-d19c-3f7a6b3a0bc6",
+				title: "Category 1",
+				desc: "",
+				groups: [
+					{
+						id: "32e275f6-27b8-431f-b3d8-5340059544a3",
+						title: "Group 1",
+						desc: "",
+					},
+					{
+						id: "85737917-40de-4ef5-ab01-990081a0ba2b",
+						title: "Group 2",
+						desc: "",
+					},
+				],
+			},
+			{
+				id: "fe52c992-426e-4445-9534-1ddd0c2aa1c1",
+				title: "Category 2",
+				desc: "",
+				groups: [
+					{
+						id: "413a3b3e-99d1-4d43-8576-03cec9f70f80",
+						title: "Group 1",
+						desc: "",
+					},
+					{
+						id: "9876f653-ed96-4680-abb8-a447454e2a89",
+						title: "Group 2",
+						desc: "",
+					},
+				],
+			},
+		],
+	},
+	items: [
+		{
+			id: "6399e9bb-6c3c-4b62-b2f8-bdfd44803c4a",
+			title: "Sample Password",
+			desc: "",
+			fav: "no",
+			trash: "no",
+			cat: [
+				{
+					id: "a837d30e-2584-c67c-d19c-3f7a6b3a0bc6",
+					groups: [
+						"32e275f6-27b8-431f-b3d8-5340059544a3",
+					],
+				},
+			],
+			tags: [
+				"tag 1",
+			],
+			url: "http://mail.yahoo.com",
+			login: "abc",
+			pwds: [
+				{
+					date: "2013/01/01",
+					exp: "90",
+					pwd: [
+						{
+							name: "Login",
+							value: "1234",
+						},
+					],
+				},
+			],
+			info: "",
+			moreInfo: [
+			],
+			ref: [
+			],
+			notes: [
+			],
+		},
+	],
+};
