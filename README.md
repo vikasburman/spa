@@ -18,7 +18,7 @@ If you want you can even cross-link information pieces to feed "See Also" featur
 
 All this information is stored in a plain text file that you can choose to store wherever you want. You can either use the "default" file which gets stored as "/data/default.pjs" wherever you have kept "spa.html" or you can have your own named file that you can keep anywhere (e.g., on a flash drive).
 
-By default, all your information is stored in plain text without any encryption, so anyone can see it if they get access to your file. BUT, you have an option to use standard and secure AES algorithm to encrypt all this information using your password itself. So only who you who will know the password will be able to see decrypted information. 
+By default, all your information is stored in plain text without any encryption, so anyone can see it if they get access to your file. BUT, you have an option to use standard and secure [AES algorithm](http://en.wikipedia.org/wiki/Advanced_Encryption_Standard) to encrypt all this information using your password itself. So only you who will know the password will be able to see decrypted information. 
 
 
 This app does not require Internet for its basic functioning. However, if Internet is available, it can use if to show the icon of the website and you can navigate to the website from within. Additionally you can check of any available update of the app. 
