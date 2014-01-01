@@ -53,7 +53,7 @@ __07-Sep-2013: Release 0.4.9 (Closed Beta)__
 2. Was not on github then.
 
 
-__01-Jan-2014: Release 0.9.0 (Public Beta)__
+__01-Jan-2014: [Release 0.9.0 (Public Beta)](https://github.com/vikasburman/spa/releases/tag/v0.9.0)__
 
 1. Initial public release. 
 2. Windows environment is configured and functioning.
