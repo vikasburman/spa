@@ -1607,7 +1607,7 @@
 				// go home section
 				navigate("home", true);
 
-				// show tags (including favoirites and uncategorized links)
+				// show tags (including favorites and uncategorized links)
 				var tags = [];
 				$.each(spa.data.items, function(i, item) {
 					if (item.tags) {
@@ -2394,6 +2394,9 @@
 
 					// go home
 					onHome();
+					
+					// open settings afterwards
+					onEditSettings();
 				} else {
 					// clean-up by logging out
 					onLogout();

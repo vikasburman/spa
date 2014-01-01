@@ -5,7 +5,7 @@
   "main": "../spa.html",
   "window": {
     "title": "Simple Passwords App",
-    "icon": "spa.png",
+    "icon": "package.png",
     "toolbar": false,
     "frame": true,
     "width": 1200,
