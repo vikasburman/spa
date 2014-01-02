@@ -1416,13 +1416,15 @@
 							if (spa.app.server.latestVersion.versionId > spa.app.versionId) {
 								$("#checkForUpdate")
 									.off('click')
+									.on('click', function() { _a(spa.app.server.latestVersion.url); event.preventDefault(); })			
 									.text('Download')
 									.addClass('badge badge-success')
 									.prop('target', '_blank')
-									.prop('href', spa.app.server.latestVersion.url)
+									.prop('href', '#')
 									.prop('title', "A new version (" + spa.app.server.latestVersion.title + ") is available now. Click here to download.");
 							} else {
 								$("#checkForUpdate")
+									.off('click')
 									.text('No Updates')
 									.addClass('badge')
 							};							
