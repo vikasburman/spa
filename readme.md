@@ -13,6 +13,4 @@ You can organize access information in various categories and sub-categories and
 
 To start using, [download the latest release](https://github.com/vikasburman/spa/releases/tag/v0.9.0), unzip it in any local folder or flash drive and start using right away by opening the app using OS specific startup shell script (e.g., spa-win.bat on Windows OS).
 
-Have more queries? Check out [FAQs](https://github.com/vikasburman/spa/wiki/FAQ) or send me a mail at [me@vikasburman.com](mailto:me@vikasburman.com).
-
 [Read More](https://github.com/vikasburman/spa/wiki)
