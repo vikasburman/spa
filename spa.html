@@ -246,7 +246,10 @@
 				return clearText;
 			};			
 		};
-		window._a = function(url) { require('nw.gui').Shell.openExternal(url); }
+		window._a = function(uri) { 
+			var gui = require('nw.gui');
+			gui.Shell.openExternal(uri); 
+		}
 		
 		// private classes
 		var stateManagerClass = function() {
@@ -871,6 +874,8 @@
 				if (month.length === 1) { month = "0" + month; }
 				if (date.length === 1) { date = "0" + date; }
 				$("#_pwd_as_on").val(year + "/" + month + "/" + date);
+				$("#_pwd_exp_days").val("");
+				$("#_new_pwd").val("");
 				if (isArray(item.pwds) && item.pwds.length > 0) {
 					item.pwds.sort(function(a, b){ 
 						var a1= a.date, b1= b.date; if(a1== b1) return 0; return a1> b1? 1: -1;
@@ -1392,7 +1397,7 @@
 				maxPasswords: 5,
 				maxPasswordHistory: 10,
 				maxPasswordTypes: 12,
-				maxMoreInfo: 5,
+				maxMoreInfo: 12,
 				maxTags: 15,
 				maxNotes: 20,
 				maxCatGroups: 10,
@@ -2112,10 +2117,17 @@
 				} else {
 					$("#itemFav").hide();
 				};
+				$("#itemUrl").off('click');
 				if (item.url && item.url.length > 0) {
 					var a = $('<a>').prop('href', item.url);
 					var favicon = a.prop("protocol") + "//" + a.prop("hostname") + "/favicon.ico";
-					$("#itemUrl").attr('href', item.url).text(item.url).show();
+					if (spa.app.canEdit) {
+						// shell
+						$("#itemUrl").text(item.url).show().on('click', function() { _a(item.url); event.preventDefault(); });
+					} else {
+						// browser
+						$("#itemUrl").attr('href', item.url).text(item.url).show();
+					}
 					$("#itemUrlFavIcon").attr('src', favicon).show();				
 				} else {
 					$("#itemUrl").hide();
@@ -3580,7 +3592,7 @@
 									<div class="control-group">
 										<label class="control-label">Details</label>
 										<div class="controls" style="margin-top: 10px;">
-											<textarea class="span12 dataEntry" rows="7" id="_info"></textarea>
+											<textarea class="span12 dataEntry" rows="8" id="_info"></textarea>
 										</div>
 									</div>
 									<div class="control-group">
@@ -3801,7 +3813,168 @@
 														</div> 
 													</div>
 												</div>
-											</div>													
+											</div>	
+											<div class="accordion-group">
+												<div class="accordion-heading">
+													<a id="_more_info_sec_name_5" class="accordion-toggle" data-toggle="collapse" data-parent="#tab_mi_acc" href="#tab_mi_acc_c6">
+														More Information #6
+													</a>
+												</div>
+												<div id="tab_mi_acc_c6" class="accordion-body collapse">
+													<div class="accordion-inner">
+														<div class="control-group">
+															<label class="control-label">Name</label>
+															<div class="controls">
+																<input type="text" class="span12 dataEntry" id="_more_info_name_5">
+															</div>
+														</div>
+														<div class="control-group">
+															<label class="control-label">Details</label>
+															<div class="controls">
+																<textarea rows="6" class="span12 dataEntry" id="_more_info_5"></textarea>
+															</div>
+														</div> 
+													</div>
+												</div>
+											</div>
+											<div class="accordion-group">
+												<div class="accordion-heading">
+													<a id="_more_info_sec_name_6" class="accordion-toggle" data-toggle="collapse" data-parent="#tab_mi_acc" href="#tab_mi_acc_c7">
+														More Information #7
+													</a>
+												</div>
+												<div id="tab_mi_acc_c7" class="accordion-body collapse">
+													<div class="accordion-inner">
+														<div class="control-group">
+															<label class="control-label">Name</label>
+															<div class="controls">
+																<input type="text" class="span12 dataEntry" id="_more_info_name_6">
+															</div>
+														</div>
+														<div class="control-group">
+															<label class="control-label">Details</label>
+															<div class="controls">
+																<textarea rows="6" class="span12 dataEntry" id="_more_info_6"></textarea>
+															</div>
+														</div> 
+													</div>
+												</div>
+											</div>
+											<div class="accordion-group">
+												<div class="accordion-heading">
+													<a id="_more_info_sec_name_7" class="accordion-toggle" data-toggle="collapse" data-parent="#tab_mi_acc" href="#tab_mi_acc_c8">
+														More Information #8
+													</a>
+												</div>
+												<div id="tab_mi_acc_c8" class="accordion-body collapse">
+													<div class="accordion-inner">
+														<div class="control-group">
+															<label class="control-label">Name</label>
+															<div class="controls">
+																<input type="text" class="span12 dataEntry" id="_more_info_name_7">
+															</div>
+														</div>
+														<div class="control-group">
+															<label class="control-label">Details</label>
+															<div class="controls">
+																<textarea rows="6" class="span12 dataEntry" id="_more_info_7"></textarea>
+															</div>
+														</div> 
+													</div>
+												</div>
+											</div>
+											<div class="accordion-group">
+												<div class="accordion-heading">
+													<a id="_more_info_sec_name_8" class="accordion-toggle" data-toggle="collapse" data-parent="#tab_mi_acc" href="#tab_mi_acc_c9">
+														More Information #9
+													</a>
+												</div>
+												<div id="tab_mi_acc_c9" class="accordion-body collapse">
+													<div class="accordion-inner">
+														<div class="control-group">
+															<label class="control-label">Name</label>
+															<div class="controls">
+																<input type="text" class="span12 dataEntry" id="_more_info_name_8">
+															</div>
+														</div>
+														<div class="control-group">
+															<label class="control-label">Details</label>
+															<div class="controls">
+																<textarea rows="6" class="span12 dataEntry" id="_more_info_8"></textarea>
+															</div>
+														</div> 
+													</div>
+												</div>
+											</div>
+											<div class="accordion-group">
+												<div class="accordion-heading">
+													<a id="_more_info_sec_name_9" class="accordion-toggle" data-toggle="collapse" data-parent="#tab_mi_acc" href="#tab_mi_acc_c10">
+														More Information #10
+													</a>
+												</div>
+												<div id="tab_mi_acc_c10" class="accordion-body collapse">
+													<div class="accordion-inner">
+														<div class="control-group">
+															<label class="control-label">Name</label>
+															<div class="controls">
+																<input type="text" class="span12 dataEntry" id="_more_info_name_9">
+															</div>
+														</div>
+														<div class="control-group">
+															<label class="control-label">Details</label>
+															<div class="controls">
+																<textarea rows="6" class="span12 dataEntry" id="_more_info_9"></textarea>
+															</div>
+														</div> 
+													</div>
+												</div>
+											</div>
+											<div class="accordion-group">
+												<div class="accordion-heading">
+													<a id="_more_info_sec_name_10" class="accordion-toggle" data-toggle="collapse" data-parent="#tab_mi_acc" href="#tab_mi_acc_c11">
+														More Information #11
+													</a>
+												</div>
+												<div id="tab_mi_acc_c11" class="accordion-body collapse">
+													<div class="accordion-inner">
+														<div class="control-group">
+															<label class="control-label">Name</label>
+															<div class="controls">
+																<input type="text" class="span12 dataEntry" id="_more_info_name_10">
+															</div>
+														</div>
+														<div class="control-group">
+															<label class="control-label">Details</label>
+															<div class="controls">
+																<textarea rows="6" class="span12 dataEntry" id="_more_info_10"></textarea>
+															</div>
+														</div> 
+													</div>
+												</div>
+											</div>
+											<div class="accordion-group">
+												<div class="accordion-heading">
+													<a id="_more_info_sec_name_11" class="accordion-toggle" data-toggle="collapse" data-parent="#tab_mi_acc" href="#tab_mi_acc_c12">
+														More Information #12
+													</a>
+												</div>
+												<div id="tab_mi_acc_c12" class="accordion-body collapse">
+													<div class="accordion-inner">
+														<div class="control-group">
+															<label class="control-label">Name</label>
+															<div class="controls">
+																<input type="text" class="span12 dataEntry" id="_more_info_name_11">
+															</div>
+														</div>
+														<div class="control-group">
+															<label class="control-label">Details</label>
+															<div class="controls">
+																<textarea rows="6" class="span12 dataEntry" id="_more_info_11"></textarea>
+															</div>
+														</div> 
+													</div>
+												</div>
+											</div>											
 										</div>
 									</div>
 									<div class="tab-pane" id="tab_organize">
