@@ -15,4 +15,4 @@ To start using, [download the latest release](https://github.com/vikasburman/spa
 
 Have more queries? Check out [FAQs](https://github.com/vikasburman/spa/wiki/FAQ) or send me a mail at [me@vikasburman.com](mailto:me@vikasburman.com).
 
-
+[Read More](https://github.com/vikasburman/spa/wiki)
