@@ -1,3 +1,3 @@
 @ECHO OFF
-start shell\Windows\nw.exe
+start app\Windows\nw.exe
 EXIT

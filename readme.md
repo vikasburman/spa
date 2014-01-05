@@ -3,17 +3,18 @@ spa - Simple Passwords App
 
 A simple, smart, secure, and sufficient portable app to store all your passwords.
 
-This one is a single page app, literally. There is only one file "spa.html" that has it all and it runs locally on any new age browser (Google Chrome, FireFox, Safari, IE 10). 
+This one is a single page app, literally. There is only one file "spa.html" that has it all and it runs locally on any new age browsers (e.g., Google Chrome, FireFox, Safari, IE 10, etc.). Additionally, it comes with a shell environment for Windows, Mac and Linux platforms as well. 
 
-__How do I install it?__
+The sole purpose of this app is to store access information to various digital assets that everyone of us has in abundance nowadays. Along with storing passwords (and history of it) it also has provision to store associated information that comes with it. E.g., account id, access url, security questions (and answers), and dated notes to name a few. Check out the given demo file to get ideas.
+
+You can organize access information in various categories and sub-categories and when that does not seem to working, add multiple tags that help you find information later. A fast and efficient free-text search (on any field) can still find any information irrespective of categories and tags associated with it. If you want you can even cross-link information pieces to feed "See Also" feature. 
+
+**IMPORTANT** No information from your data file is *ever* uploaded, downloaded or transferred to any website whatsoever. This can be verified in the app code.
+
 To start using, [download the latest release](https://github.com/vikasburman/spa/releases/tag/v0.9.0), unzip it in any local folder or flash drive and start using right away by opening the app using OS specific startup shell script (e.g., spa-win.bat on Windows OS).
 
-__What I can do with this?__
-The sole purpose of this app is to store access information to various digital assets that everyone of us has in abundance nowadays. Along with storing passwords (and history of it) it also has provision to store all associated information that comes with it. E.g., account, access url, security questions (and answers), and dated notes to name a few. Check out the given demo file to get ideas.
+Have more queries? Check out [FAQs]() or send me a mail at [me@vikasburman.com](mailto:me@vikasburman.com).
 
-You can organize your information in various categories and sub-categories and when that does not seem to working, add multiple tags that help you find it later. A fast and efficient free-text search (on any field) can still find any information irrespective of categories and tags associated with it. 
-
-If you want you can even cross-link information pieces to feed "See Also" feature. 
 
 __Where this information is stored?__
 All this information is stored in a plain text file that you can choose to store wherever you want. You can either use the "default" file which gets stored as "/data/spa.pjs" wherever you have kept "spa.html" or you can have your own named file that you can keep anywhere (e.g., on a flash drive).
@@ -24,17 +25,12 @@ By default, all your information is stored in plain text without any encryption,
 __Does it need Internet?__
 This app does not require Internet for its basic functioning. However, if Internet is available, it can use it to show the icon of the website and you can navigate to the website from within. Additionally having Internet, you can check for any available updates of this app. 
 
-**No information from your data file is *ever* transferred to any website whatsoever. This can be verified in the app code.**
-
 __How can I run it?__
 This app when opened directly in a browser (double-click on spa.html file), works in read-only mode, that means you cannot edit anything. This is because browsers do not allow writing to the local file system for all security reasons. 
 
 To enable editing, this app uses [node-webkit](https://github.com/rogerwang/node-webkit) app shells for Windows, Mac and Linux platforms. Depending upon the platform you are, you can use required command-line shell script. E.g, spa-win.bat for Windows OS.  When app is opened using any of these provided shell, it enables all the editing features.
 
 **Note:** When running first time, you must run it using given startup program, so that it can create your default data file. Also note that a new default file's password is always set to be 1234, irrespective of whatever you define. This can later be changed using Settings.
-
-
-Have more queries? Send me a mail at [me@vikasburman.com](mailto:me@vikasburman.com).
 
 
 Release Notes
