@@ -11,6 +11,6 @@ You can organize access information in various categories and sub-categories and
 
 **IMPORTANT** No information from your data file is *ever* uploaded, downloaded or transferred to any website whatsoever. This can be verified in the app code.
 
-To start using, [download the latest release](https://github.com/vikasburman/spa/releases/tag/v0.9.2), unzip it in any local folder or flash drive and start using right away by opening the app using OS specific startup shell script (e.g., spa-win.bat on Windows OS).
+To start using, [download the latest release](https://github.com/vikasburman/spa/releases/tag/v0.9.3), unzip it in any local folder or flash drive and start using right away by opening the app using OS specific startup shell script (e.g., spa-win.bat on Windows OS).
 
 ### [Read More](https://github.com/vikasburman/spa/wiki)

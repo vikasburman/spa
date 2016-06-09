@@ -1,49 +1,53 @@
 spaData = {
 	settings: {
 		title: "Demo Passwords",
-		pin: "1234",
+		pin: "0000",
 		encrypt: "no",
 		searchDepth: "",
-		lastUpdate: "2013/12/31 14:50:36",
-		appVersionId: "1",
+		lastUpdate: "2013/07/28 10:03:58",
+		appVersionId: "0.97",
 		dataFormatVersionId: "1",
-		passwordTypes: [
-			"Login",
-			"Transaction",
-			"PIN",
-			"TIN",
-		],
 		categories: [
 			{
-				id: "a837d30e-2584-c67c-d19c-3f7a6b3a0bc6",
-				title: "Category 1",
-				desc: "",
+				id: "bank",
+				title: "Banks",
+				desc: "Bank account details",
 				groups: [
 					{
-						id: "32e275f6-27b8-431f-b3d8-5340059544a3",
-						title: "Group 1",
+						id: "loan",
+						title: "Loan",
+						desc: "Loan account details",
+					},
+					{
+						id: "personal",
+						title: "Personal",
 						desc: "",
 					},
 					{
-						id: "85737917-40de-4ef5-ab01-990081a0ba2b",
-						title: "Group 2",
+						id: "salary",
+						title: "Salary Accounts",
 						desc: "",
 					},
 				],
 			},
 			{
-				id: "fe52c992-426e-4445-9534-1ddd0c2aa1c1",
-				title: "Category 2",
-				desc: "",
+				id: "email",
+				title: "E-mails",
+				desc: "E-mail account details",
 				groups: [
 					{
-						id: "413a3b3e-99d1-4d43-8576-03cec9f70f80",
-						title: "Group 1",
+						id: "professional",
+						title: "Professional",
 						desc: "",
 					},
 					{
-						id: "9876f653-ed96-4680-abb8-a447454e2a89",
-						title: "Group 2",
+						id: "family",
+						title: "Family",
+						desc: "",
+					},
+					{
+						id: "personal",
+						title: "Personal",
 						desc: "",
 					},
 				],
@@ -52,35 +56,173 @@ spaData = {
 	},
 	items: [
 		{
-			id: "6399e9bb-6c3c-4b62-b2f8-bdfd44803c4a",
-			title: "Sample Password",
-			desc: "",
+			id: "2",
+			title: "HDFC 1",
+			desc: "115584 -- tag 2",
 			fav: "no",
-			trash: "no",
 			cat: [
 				{
-					id: "a837d30e-2584-c67c-d19c-3f7a6b3a0bc6",
+					id: "bank",
 					groups: [
-						"32e275f6-27b8-431f-b3d8-5340059544a3",
+						"personal",
+						"salary",
 					],
 				},
 			],
 			tags: [
 				"tag 1",
+				"tag 3",
+				"tag 4",
 			],
-			url: "http://mail.yahoo.com",
-			login: "abc",
+			url: "http://www.hdfcbank.com",
+			login: "2300383",
 			pwds: [
 				{
-					date: "2013/01/01",
-					exp: "90",
+					date: "2013/03/21",
+					exp: "",
 					pwd: [
 						{
 							name: "Login",
-							value: "1234",
+							value: "PWD2",
+						},
+						{
+							name: "Transaction",
+							value: "PWD22",
 						},
 					],
 				},
+				{
+					date: "2012/12/25",
+					pwd: [
+						{
+							name: "Login",
+							value: "PWD1",
+						},
+						{
+							name: "Transaction",
+							value: "PWD11",
+						},
+					],
+				},
+			],
+			info: "A lot of details can come here",
+			moreInfo: [
+				{
+					name: "More Info12",
+					mark: "",
+					details: "More Details 11",
+				},
+				{
+					name: "More Info22",
+					mark: "",
+					details: "More Details 22",
+				},
+			],
+			ref: [
+				"3",
+			],
+			notes: [
+				{
+					mark: "",
+					date: "2012/12/15",
+					note: "Some note 1",
+				},
+				{
+					mark: "",
+					date: "2012/12/25",
+					note: "Some note 3",
+				},
+			],
+		},
+		{
+			id: "3",
+			title: "HDFC 2 (Cache Test)",
+			desc: "115584",
+			fav: "no",
+			cat: [
+				{
+					id: "bank",
+					groups: [
+						"loan",
+						"personal",
+					],
+				},
+			],
+			tags: [
+				"tag 3",
+			],
+			url: "http://icicibank.com",
+			login: "2300383",
+			pwds: [
+				{
+					date: "2013/03/21",
+					exp: "",
+					pwd: [
+						{
+							name: "Login",
+							value: "PWD2",
+						},
+						{
+							name: "Transaction",
+							value: "PWD22",
+						},
+					],
+				},
+				{
+					date: "2012/12/25",
+					pwd: [
+						{
+							name: "Login",
+							value: "PWD1",
+						},
+						{
+							name: "Transaction",
+							value: "PWD11",
+						},
+					],
+				},
+			],
+			info: "A lot of details can come here",
+			moreInfo: [
+				{
+					name: "More Info12",
+					mark: "12",
+					details: "<b>More Details 11</b>",
+				},
+				{
+					name: "More Info22",
+					mark: "",
+					details: "More Details 22",
+				},
+			],
+			ref: [
+				"2",
+			],
+			notes: [
+				{
+					mark: "13",
+					date: "2012/12/15",
+					note: "Some note 1",
+				},
+				{
+					mark: "",
+					date: "2012/12/15",
+					note: "Some note 2",
+				},
+			],
+		},
+		{
+			id: "a837d30e-2584-c67c-d19c-3f7a6b3a0bc6",
+			title: "New Data",
+			desc: "",
+			fav: "no",
+			cat: [
+			],
+			tags: [
+			],
+			url: "",
+			login: "",
+			pwds: [
 			],
 			info: "",
 			moreInfo: [
@@ -88,6 +230,86 @@ spaData = {
 			ref: [
 			],
 			notes: [
+			],
+		},
+		{
+			id: "1",
+			title: "Yahoo Mail",
+			fav: "yes",
+			desc: "Yahoo e-mail account",
+			cat: [
+				{
+					id: "email",
+					groups: [
+						"personal",
+						"family",
+					],
+				},
+			],
+			tags: [
+				"tag 1",
+				"tag 2",
+				"tag 3",
+			],
+			url: "http://mail.yahoo.com",
+			login: "vikasburman",
+			pwds: [
+				{
+					date: "2013/03/21",
+					pwd: [
+						{
+							name: "",
+							value: "PWD - NEW",
+						},
+					],
+				},
+				{
+					date: "2012/12/25",
+					pwd: [
+						{
+							name: "",
+							value: "PWD1",
+						},
+					],
+				},
+				{
+					date: "2011/10/22",
+					pwd: [
+						{
+							name: "",
+							value: "PWD1",
+						},
+					],
+				},
+			],
+			info: "A lot of details can come here",
+			moreInfo: [
+				{
+					name: "More Info1 ",
+					mark: "Imp",
+					details: "More Details 1",
+				},
+				{
+					name: "More Info2 ",
+					mark: "",
+					details: "More Details 2",
+				},
+			],
+			ref: [
+			],
+			notes: [
+				{
+					date: "2012/12/15",
+					note: "Some note 1",
+				},
+				{
+					date: "2012/12/21",
+					note: "Some note 2",
+				},
+				{
+					date: "2012/12/25",
+					note: "Some note 3",
+				},
 			],
 		},
 	],

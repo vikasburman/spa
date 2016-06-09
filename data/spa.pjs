@@ -1,0 +1,258 @@
+spaData = {
+	settings: {
+		title: "My Passwords",
+		pin: "1234",
+		encrypt: "no",
+		searchDepth: "",
+		lastUpdate: "2013/08/01 13:32:16",
+		appVersionId: "0.9",
+		dataFormatVersionId: "1",
+		passwordTypes: [
+			"Login",
+			"Transaction",
+			"PIN",
+			"TIN",
+		],
+		categories: [
+			{
+				id: "32fa1b67-0140-6ac4-ba7b-d49e58f3bb22",
+				title: "1=Personal",
+				desc: "",
+				groups: [
+					{
+						id: "e3c32433-1bd7-4f97-e8fe-fe974a6ed4b0",
+						title: "New Group",
+						desc: "",
+					},
+				],
+			},
+			{
+				id: "af66dd27-a29e-9ec6-6724-c763764c0843",
+				title: "2=Vikas",
+				desc: "",
+				groups: [
+					{
+						id: "ec51cdc0-f35c-15b5-9e97-5a94269cb6ff",
+						title: "New Group",
+						desc: "",
+					},
+				],
+			},
+		],
+	},
+	items: [
+		{
+			id: "2",
+			title: "HDFC 1",
+			desc: "115584 -- tag 2",
+			fav: "yes",
+			cat: [
+				{
+					id: "32fa1b67-0140-6ac4-ba7b-d49e58f3bb22",
+					groups: [
+						"e3c32433-1bd7-4f97-e8fe-fe974a6ed4b0",
+					],
+				},
+			],
+			tags: [
+				"tag 1",
+				"tag 3",
+				"tag 4",
+			],
+			url: "http://www.hdfcbank.com",
+			login: "2300383",
+			pwds: [
+				{
+					date: "2013/03/21",
+					exp: "",
+					pwd: [
+						{
+							name: "Login",
+							value: "PWD2",
+						},
+						{
+							name: "Transaction",
+							value: "PWD22",
+						},
+					],
+				},
+				{
+					date: "2012/12/25",
+					pwd: [
+						{
+							name: "Login",
+							value: "PWD1",
+						},
+						{
+							name: "Transaction",
+							value: "PWD11",
+						},
+					],
+				},
+			],
+			info: "A lot of details can come here",
+			moreInfo: [
+				{
+					name: "Secret Questions 3",
+					details: "More Details 11",
+				},
+				{
+					name: "More Info22",
+					details: "More Details 22",
+				},
+			],
+			ref: [
+				"3",
+			],
+			notes: [
+				{
+					date: "2012/12/15",
+					note: "Some note 1",
+				},
+				{
+					date: "2012/12/25",
+					note: "Some note 3",
+				},
+			],
+			trash: "no",
+		},
+		{
+			id: "3",
+			title: "HDFC 2",
+			desc: "115584",
+			fav: "no",
+			trash: "no",
+			cat: [
+			],
+			tags: [
+				"tag 3",
+			],
+			url: "http://icicibank.com",
+			login: "2300383",
+			pwds: [
+				{
+					date: "2013/03/21",
+					exp: "180",
+					pwd: [
+						{
+							name: "Login",
+							value: "PWD2",
+						},
+						{
+							name: "Transaction",
+							value: "PWD22",
+						},
+					],
+				},
+				{
+					date: "2012/12/25",
+					pwd: [
+						{
+							name: "Login",
+							value: "PWD1",
+						},
+						{
+							name: "Transaction",
+							value: "PWD11",
+						},
+					],
+				},
+			],
+			info: "A lot of details can come here",
+			moreInfo: [
+				{
+					name: "More Info12",
+					details: "<b>More Details 11</b>",
+				},
+				{
+					name: "More Info22",
+					details: "More Details 22",
+				},
+			],
+			ref: [
+				"2",
+			],
+			notes: [
+				{
+					date: "2012/12/15",
+					note: "Some note 1",
+				},
+				{
+					date: "2012/12/15",
+					note: "Some note 2",
+				},
+			],
+		},
+		{
+			id: "1",
+			title: "Yahoo Mail",
+			desc: "Yahoo e-mail account",
+			fav: "yes",
+			cat: [
+			],
+			tags: [
+				"tag 1",
+				"tag 2",
+				"tag 3",
+			],
+			url: "http://mail.yahoo.com",
+			login: "vikasburman@yahoo.com",
+			pwds: [
+				{
+					date: "2013/03/21",
+					pwd: [
+						{
+							name: "",
+							value: "PWD - NEW",
+						},
+					],
+				},
+				{
+					date: "2012/12/25",
+					pwd: [
+						{
+							name: "",
+							value: "PWD1",
+						},
+					],
+				},
+				{
+					date: "2011/10/22",
+					pwd: [
+						{
+							name: "",
+							value: "PWD1",
+						},
+					],
+				},
+			],
+			info: "A lot of details can come here",
+			moreInfo: [
+				{
+					name: "More Info1 ",
+					details: "More Details 1",
+				},
+				{
+					name: "More Info2 ",
+					details: "More Details 2",
+				},
+			],
+			ref: [
+			],
+			notes: [
+				{
+					date: "2012/12/15",
+					note: "Some note 1",
+				},
+				{
+					date: "2012/12/21",
+					note: "Some note 2",
+				},
+				{
+					date: "2012/12/25",
+					note: "Some note 3",
+				},
+			],
+		},
+	],
+};
