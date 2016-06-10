@@ -3,7 +3,7 @@ spa - Simple Passwords App
 
 A simple, smart, secure, and sufficient portable app to store all your passwords.
 
-This one is a single page app, literally. There is only one file "spa.html" that has it all and it runs locally on any new age browsers (e.g., Google Chrome, FireFox, Safari, IE 10, etc.). Additionally, it comes with a shell environment for Windows, Mac and Linux platforms as well. 
+This one is a single page app, literally. There is only one file "spa.html" that has it all and it runs locally (e.g., on windows, run it via spa.bat) on any new age browsers (e.g., Google Chrome, FireFox, Safari, IE 10, etc.). Additionally, it comes with a shell environment for Windows (available), Mac and Linux platforms (coming soon) as well. 
 
 The sole purpose of this app is to store access information to various digital assets that everyone of us has in abundance nowadays. Along with storing passwords (and history of it) it also has provision to store associated information that comes with it. E.g., account id, access url, security questions (and answers), and dated notes to name a few. Check out the given demo file to get ideas.
 
