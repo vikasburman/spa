@@ -2,10 +2,10 @@
   "name": "spa",
   "description": "Simple Passwords App",
   "version": "0.9.3",
-  "main": "spa.html",
+  "main": "app/spa.html",
   "window": {
     "title": "Simple Passwords App",
-    "icon": "spa.png",
+    "icon": "app/spa.png",
     "toolbar": false,
     "frame": true,
     "width": 1200,

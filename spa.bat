@@ -1,3 +1,3 @@
 @ECHO OFF
-start nw.exe
+start app/spa.html
 EXIT
