@@ -4,8 +4,8 @@ spaData = {
 		pin: "1234",
 		encrypt: "no",
 		searchDepth: "",
-		lastUpdate: "2013/08/01 13:32:16",
-		appVersionId: "0.9",
+		lastUpdate: "2016/06/10 09:56:31",
+		appVersionId: "0.93",
 		dataFormatVersionId: "1",
 		passwordTypes: [
 			"Login",

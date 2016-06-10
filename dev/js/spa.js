@@ -169,7 +169,7 @@
 	};
 	var fileSystemClass = function() {
 		// in-browser local file system access
-		var fs = (typeof nwDispatcher !== 'undefined' ? require('fs') : null);
+		var fs = (typeof nw !== 'undefined' ? require('fs') : null);
 						
 		this.getRoot = function() {
 			var a = $('<a>').prop('href', document.location.href);
@@ -1411,7 +1411,7 @@
 			};
 			
 			// load data file
-			utils.loadJS("file://" + dataFile, function(isError) {
+			utils.loadJS((typeof nw !== 'undefined' ? './' : 'file://') + dataFile, function(isError) {
 				if (!isError) {
 					onDataFileLoad(dataFile);
 				} else {

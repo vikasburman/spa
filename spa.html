@@ -289,7 +289,7 @@
 		};
 		var fileSystemClass = function() {
 			// in-browser local file system access
-			var fs = (typeof nwDispatcher !== 'undefined' ? require('fs') : null);
+			var fs = (typeof nw !== 'undefined' ? require('fs') : null);
 							
 			this.getRoot = function() {
 				var a = $('<a>').prop('href', document.location.href);
@@ -1386,7 +1386,7 @@
 			this.copyright = "&copy; 2013-2016, Vikas Burman. All rights reserved.";
 			this.tagline = "Simple, smart, secure, and sufficient portable app to store all your passwords.";
 			this.url = "https://github.com/vikasburman/spa";
-			this.newVersionDefinitionUrl = "https://raw.github.com/vikasburman/spa/master/app/updates.js"; 
+			this.newVersionDefinitionUrl = "https://raw.github.com/vikasburman/spa/master/updates.js"; 
 			this.server = {
 				// latest version info (this gets updated by loading a version info file from server)
 				latestVersion: {
@@ -1531,7 +1531,7 @@
 				};
 				
 				// load data file
-				utils.loadJS("file://" + dataFile, function(isError) {
+				utils.loadJS((typeof nw !== 'undefined' ? './' : 'file://') + dataFile, function(isError) {
 					if (!isError) {
 						onDataFileLoad(dataFile);
 					} else {
