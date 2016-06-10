@@ -1260,19 +1260,19 @@
 		
 		// properties
 		this.title = "Simple Passwords App";
-		this.version = "0.9.0";
-		this.versionId = 0.90;
+		this.version = "0.9.3";
+		this.versionId = 0.93;
 		this.dataFormatVersionId = 1;
-		this.copyright = "&copy; 2013-2014, Vikas Burman. All rights reserved.";
+		this.copyright = "&copy; 2013-2016, Vikas Burman. All rights reserved.";
 		this.tagline = "Simple, smart, secure, and sufficient portable app to store all your passwords.";
 		this.url = "https://github.com/vikasburman/spa";
 		this.newVersionDefinitionUrl = "https://raw.github.com/vikasburman/spa/master/updates.js"; 
 		this.server = {
 			// latest version info (this gets updated by loading a version info file from server)
 			latestVersion: {
-				versionId: 0.90,
+				versionId: 0.93,
 				url: "https://github.com/vikasburman/spa",
-				title: "Version 0.9.0",
+				title: "Version 0.9.3",
 			}
 		};
 		this.settings = {
@@ -1292,7 +1292,7 @@
 			dataFileRootObject: "spaData",
 		};
 		this.state = {};
-		this.canEdit = (typeof nwDispatcher !== 'undefined');
+		this.canEdit = (typeof nw !== 'undefined');
 	
 		// event handlers
 		function onCheckForUpdate() {
