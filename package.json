@@ -1,7 +1,7 @@
 {
   "name": "spa",
   "description": "Simple Passwords App",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "main": "spa.html",
   "window": {
     "title": "Simple Passwords App",

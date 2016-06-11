@@ -1,54 +1,152 @@
 spaData = {
 	settings: {
 		title: "Demo Passwords",
-		pin: "0000",
+		pin: "1234",
 		encrypt: "no",
 		searchDepth: "",
-		lastUpdate: "2013/07/28 10:03:58",
-		appVersionId: "0.97",
+		lastUpdate: "2016/06/11 14:42:02",
+		appVersionId: "0.94",
 		dataFormatVersionId: "1",
+		passwordTypes: [
+			"Login",
+			"Transaction",
+			"PIN",
+			"TIN",
+			"TPIN",
+		],
 		categories: [
 			{
-				id: "bank",
-				title: "Banks",
-				desc: "Bank account details",
+				id: "af66dd27-a29e-9ec6-6724-c763764c0843",
+				title: "1=Professional",
+				desc: "What crosses path in professional scenarios.",
 				groups: [
 					{
-						id: "loan",
-						title: "Loan",
-						desc: "Loan account details",
+						id: "ec51cdc0-f35c-15b5-9e97-5a94269cb6ff",
+						title: "1=Communication",
+						desc: "Emails, messengers and other accounts used for professional communication.",
 					},
 					{
-						id: "personal",
-						title: "Personal",
-						desc: "",
+						id: "895bcfb3-0023-9323-ad8d-55258de45e26",
+						title: "2=Cart",
+						desc: "Digital purchase related accounts for stuff like domains, hosting, themes, apps, etc.",
 					},
 					{
-						id: "salary",
-						title: "Salary Accounts",
-						desc: "",
+						id: "827464db-2817-56ff-e192-44f02f0b5f25",
+						title: "3=Money",
+						desc: "All financial transaction accounts which maps to professional life.",
+					},
+					{
+						id: "e5a2c1a9-c165-5a13-0e46-47ed855e9406",
+						title: "4=Memberships",
+						desc: "Membership accounts created on various websites which are used for professional interactions.",
+					},
+					{
+						id: "77740f69-4b00-d268-4a05-4991da87c6e4",
+						title: "5=Subscriptions",
+						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
 					},
 				],
 			},
 			{
-				id: "email",
-				title: "E-mails",
-				desc: "E-mail account details",
+				id: "c0e0fc5f-f302-a8c9-b62e-2ea820840fa1",
+				title: "2=Educational",
+				desc: "Services that are relevant for educational facet of life.",
 				groups: [
 					{
-						id: "professional",
-						title: "Professional",
-						desc: "",
+						id: "4743dbc2-43f2-2d09-d12d-a97d8c40be9a",
+						title: "1=Certifications",
+						desc: "Access to various digital certificates related to educational life.",
 					},
 					{
-						id: "family",
-						title: "Family",
-						desc: "",
+						id: "115dcb6e-6ae8-44ef-c34f-1dc1e82eb348",
+						title: "2=Memberships",
+						desc: "Membership accounts created on various websites which are used for educational interactions.",
 					},
 					{
-						id: "personal",
-						title: "Personal",
-						desc: "",
+						id: "60c7c74f-74b1-177d-9e1f-ae4aaa512402",
+						title: "3=Subscriptions",
+						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
+					},
+				],
+			},
+			{
+				id: "32fa1b67-0140-6ac4-ba7b-d49e58f3bb22",
+				title: "3=Financial",
+				desc: "Financial assets, instruments, services and institutions.",
+				groups: [
+					{
+						id: "e3c32433-1bd7-4f97-e8fe-fe974a6ed4b0",
+						title: "1=Banking",
+						desc: "Banking and other transactional accoounts that involve real money transfer.",
+					},
+					{
+						id: "85a7e28c-77f5-9b1d-b627-fcc5d355931f",
+						title: "2=Assets",
+						desc: "Digital accounts (transactional or non-transactional) for assets such as PF, EPF, Commodity, Demat, etc.",
+					},
+					{
+						id: "42f0391e-9238-b5e3-e0d9-0e6413feb5b2",
+						title: "3=Memberships",
+						desc: "Membership accounts created on various websites which are used for financial interactions.",
+					},
+					{
+						id: "d2822b2e-8874-2b6a-e6ae-15bb047c6581",
+						title: "4=Subscriptions",
+						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
+					},
+				],
+			},
+			{
+				id: "21acec74-c373-4a19-2cca-684cdabfdbca",
+				title: "4=Family",
+				desc: "Anything and everything that exists and applies to home gadgets, services and facilities.",
+				groups: [
+					{
+						id: "6836c7cc-185f-51ce-2a9f-4e3cd3482a81",
+						title: "1=Communication",
+						desc: "Personal emails, messengers and other accounts used for communication by all family members.",
+					},
+					{
+						id: "361924c7-5e4b-bbcd-043e-759040c4810b",
+						title: "2=Appliances",
+						desc: "Access information for home appliances, network and gadgets.",
+					},
+					{
+						id: "57b4acc7-94e5-fffe-be34-0e99cbf53922",
+						title: "3=Utilities",
+						desc: "Travel, phone, digital tv, and other accounts used to access various utility services.",
+					},
+					{
+						id: "46bef0cd-90bb-e5b9-9130-0866d3fe5d10",
+						title: "4=Shopping",
+						desc: "E-commerce accounts used for shopping on various websites, portals, and apps.",
+					},
+					{
+						id: "4bbf1639-3c07-7a98-78cd-faaaee7b608f",
+						title: "5=Memberships",
+						desc: "Membership accounts created on various websites which are used for general interactions.",
+					},
+					{
+						id: "7d2a28df-7a50-dc52-da8a-a157c32d271a",
+						title: "6=Subscriptions",
+						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
+					},
+				],
+			},
+			{
+				id: "6e5cfbd0-c2f1-aef2-c247-cd7726a6bf32",
+				title: "5=Leisure",
+				desc: "Things that are just like that, time pass or pure fun.",
+				groups: [
+					{
+						id: "25d80e8a-4321-6a9e-46a3-1dc101d331b8",
+						title: "1=Memberships",
+						desc: "Membership accounts created on various websites which are used for leisure interactions.",
+					},
+					{
+						id: "6105482e-b663-332b-e740-ddcf0fb1fcdc",
+						title: "2=Subscriptions",
+						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
 					},
 				],
 			},
@@ -56,169 +154,20 @@ spaData = {
 	},
 	items: [
 		{
-			id: "2",
-			title: "HDFC 1",
-			desc: "115584 -- tag 2",
-			fav: "no",
-			cat: [
-				{
-					id: "bank",
-					groups: [
-						"personal",
-						"salary",
-					],
-				},
-			],
-			tags: [
-				"tag 1",
-				"tag 3",
-				"tag 4",
-			],
-			url: "http://www.hdfcbank.com",
-			login: "2300383",
-			pwds: [
-				{
-					date: "2013/03/21",
-					exp: "",
-					pwd: [
-						{
-							name: "Login",
-							value: "PWD2",
-						},
-						{
-							name: "Transaction",
-							value: "PWD22",
-						},
-					],
-				},
-				{
-					date: "2012/12/25",
-					pwd: [
-						{
-							name: "Login",
-							value: "PWD1",
-						},
-						{
-							name: "Transaction",
-							value: "PWD11",
-						},
-					],
-				},
-			],
-			info: "A lot of details can come here",
-			moreInfo: [
-				{
-					name: "More Info12",
-					mark: "",
-					details: "More Details 11",
-				},
-				{
-					name: "More Info22",
-					mark: "",
-					details: "More Details 22",
-				},
-			],
-			ref: [
-				"3",
-			],
-			notes: [
-				{
-					mark: "",
-					date: "2012/12/15",
-					note: "Some note 1",
-				},
-				{
-					mark: "",
-					date: "2012/12/25",
-					note: "Some note 3",
-				},
-			],
-		},
-		{
-			id: "3",
-			title: "HDFC 2 (Cache Test)",
-			desc: "115584",
-			fav: "no",
-			cat: [
-				{
-					id: "bank",
-					groups: [
-						"loan",
-						"personal",
-					],
-				},
-			],
-			tags: [
-				"tag 3",
-			],
-			url: "http://icicibank.com",
-			login: "2300383",
-			pwds: [
-				{
-					date: "2013/03/21",
-					exp: "",
-					pwd: [
-						{
-							name: "Login",
-							value: "PWD2",
-						},
-						{
-							name: "Transaction",
-							value: "PWD22",
-						},
-					],
-				},
-				{
-					date: "2012/12/25",
-					pwd: [
-						{
-							name: "Login",
-							value: "PWD1",
-						},
-						{
-							name: "Transaction",
-							value: "PWD11",
-						},
-					],
-				},
-			],
-			info: "A lot of details can come here",
-			moreInfo: [
-				{
-					name: "More Info12",
-					mark: "12",
-					details: "<b>More Details 11</b>",
-				},
-				{
-					name: "More Info22",
-					mark: "",
-					details: "More Details 22",
-				},
-			],
-			ref: [
-				"2",
-			],
-			notes: [
-				{
-					mark: "13",
-					date: "2012/12/15",
-					note: "Some note 1",
-				},
-				{
-					mark: "",
-					date: "2012/12/15",
-					note: "Some note 2",
-				},
-			],
-		},
-		{
-			id: "a837d30e-2584-c67c-d19c-3f7a6b3a0bc6",
-			title: "New Data",
+			id: "9b81bc0e-bd42-276e-6d20-7287a7b268ce",
+			title: "New Dataasad",
 			desc: "",
 			fav: "no",
 			cat: [
+				{
+					id: "af66dd27-a29e-9ec6-6724-c763764c0843",
+					groups: [
+						"ec51cdc0-f35c-15b5-9e97-5a94269cb6ff",
+					],
+				},
 			],
 			tags: [
+				"tag1",
 			],
 			url: "",
 			login: "",
@@ -233,83 +182,30 @@ spaData = {
 			],
 		},
 		{
-			id: "1",
-			title: "Yahoo Mail",
-			fav: "yes",
-			desc: "Yahoo e-mail account",
+			id: "a356c6ea-8fd0-c910-41c0-4315f30b7585",
+			title: "sfasf",
+			desc: "",
+			fav: "no",
 			cat: [
 				{
-					id: "email",
+					id: "af66dd27-a29e-9ec6-6724-c763764c0843",
 					groups: [
-						"personal",
-						"family",
+						"ec51cdc0-f35c-15b5-9e97-5a94269cb6ff",
 					],
 				},
 			],
 			tags: [
-				"tag 1",
-				"tag 2",
-				"tag 3",
 			],
-			url: "http://mail.yahoo.com",
-			login: "vikasburman",
+			url: "",
+			login: "",
 			pwds: [
-				{
-					date: "2013/03/21",
-					pwd: [
-						{
-							name: "",
-							value: "PWD - NEW",
-						},
-					],
-				},
-				{
-					date: "2012/12/25",
-					pwd: [
-						{
-							name: "",
-							value: "PWD1",
-						},
-					],
-				},
-				{
-					date: "2011/10/22",
-					pwd: [
-						{
-							name: "",
-							value: "PWD1",
-						},
-					],
-				},
 			],
-			info: "A lot of details can come here",
+			info: "",
 			moreInfo: [
-				{
-					name: "More Info1 ",
-					mark: "Imp",
-					details: "More Details 1",
-				},
-				{
-					name: "More Info2 ",
-					mark: "",
-					details: "More Details 2",
-				},
 			],
 			ref: [
 			],
 			notes: [
-				{
-					date: "2012/12/15",
-					note: "Some note 1",
-				},
-				{
-					date: "2012/12/21",
-					note: "Some note 2",
-				},
-				{
-					date: "2012/12/25",
-					note: "Some note 3",
-				},
 			],
 		},
 	],

@@ -1,40 +1,152 @@
 spaData = {
 	settings: {
-		title: "My Passwords",
-		pin: "1234",
-		encrypt: "no",
-		searchDepth: "",
-		lastUpdate: "2016/06/10 09:56:31",
-		appVersionId: "0.93",
-		dataFormatVersionId: "1",
+		title: _d('U2FsdGVkX1//exHu1tG0LLK17sONeWRhHtYxniIjwJI='),
+		pin: _d('U2FsdGVkX19W2C7/g6QN+RC7eA70RWXpnCNmZI4eCKk='),
+		encrypt: _d('U2FsdGVkX1+GZvM+fiA88Kgma+s3EXfjepbQ/C/T4V8='),
+		searchDepth: _d('U2FsdGVkX1/fZcwvCwiypu21de78d1T1ttaPW24akVI='),
+		lastUpdate: _d('U2FsdGVkX18JjmG96xgx05uLGJQjOm/8eCnSwUtgsBBVHzRDmfG2AuN30YUXn/ut{CR}'),
+		appVersionId: _d('U2FsdGVkX1/XAkvGwPhtsCZuDdaL6hfbLsjZirZnq6c='),
+		dataFormatVersionId: _d('U2FsdGVkX19zz4Tvt8ZB5wGME3GWIT7+NVO2OgJEaA8='),
 		passwordTypes: [
-			"Login",
-			"Transaction",
-			"PIN",
-			"TIN",
+			_d('U2FsdGVkX1/Hzyb2mi/rDY+8ID9ZcjaB5uTrdsnyzTo='),
+			_d('U2FsdGVkX1/3FP1Qn6ojgVfmr6Fb0uNUdlK/Vic8O/g='),
+			_d('U2FsdGVkX1/wkwhtNhNPsIwxCVpnVRIS0jx4wQ9sMf0='),
+			_d('U2FsdGVkX197Y2p6t5KFH1RdX6Az2t3BIki6FPY1FG0='),
+			_d('U2FsdGVkX1/+dLGHDDxCZ4KxBg0P3hL+0x5wfklyKQ4='),
 		],
 		categories: [
 			{
-				id: "32fa1b67-0140-6ac4-ba7b-d49e58f3bb22",
-				title: "1=Personal",
-				desc: "",
+				id: _d('U2FsdGVkX18Fo+wOKpo5X5GdP7Vqr04t338DbAJK4hfRUdgKVLABRzHPiRZL1ZyN{CR}pFM4bW/l4XWLEtNgS9IGtQ=='),
+				title: _d('U2FsdGVkX1+cHEbsQuGb2Nhgjt09tWWvKsDPy01auOQ='),
+				desc: _d('U2FsdGVkX19XB6mY04XjhiRUpa6YlHod3686GORe1hduSonFrE5xAeZENsSO6BdN{CR}Gdc0RErCfUILEl6fVMYvLw=='),
 				groups: [
 					{
-						id: "e3c32433-1bd7-4f97-e8fe-fe974a6ed4b0",
-						title: "New Group",
-						desc: "",
+						id: _d('U2FsdGVkX18G2H0V629qrR32xkg3VWmoG9dvta+b96wh7UAx5JBIlkJ4xcLMUx13{CR}Z5azm7y8fXcEGdSw0kcaIg=='),
+						title: _d('U2FsdGVkX19DZ3+6feagpg3Blb5FOLQBZHluYhri9/o='),
+						desc: _d('U2FsdGVkX1+duuc8VNOSlPO10LT7J8Mt5eNESVi7wmyEuiOlJY7GE+gvY/jWdrCn{CR}lIx50k8qk0D7ZbqIiVZ29t6DEDWoXpz3APZBdmavbHrenqp0Q9tKmpSuKRrl5cMB{CR}'),
+					},
+					{
+						id: _d('U2FsdGVkX18oZ9MmwrvMYb4/rLElKoU7l7/HPW5nFSWVRc1xQUgv2Q3hn+SpM0HX{CR}VnGuAcqQBYn08VZsADpk8w=='),
+						title: _d('U2FsdGVkX18HRp8hObxSJ3R6L847OlOVXBtRnr4u4E8='),
+						desc: _d('U2FsdGVkX1/QOlnHPKihOq/Rri5hfCMutPYPRWcLMF2wPj2kmC9XSeNFecbnX2L+{CR}H9zIoJ1mLfvN7LCFzNnymMTkGDHJ8razsS267wv+cvSUEe6ZxKyoQUWLlslfV65z{CR}TH8eoUpJmA2tKbQuyU6z6g=='),
+					},
+					{
+						id: _d('U2FsdGVkX1/Ks9VMCqYXBcC5yRv1CgrzURrkTeJyXoEA73e3EYI5T3NbMG8ZKsoh{CR}hwpYkHBjjeW5pieKBEep+g=='),
+						title: _d('U2FsdGVkX1/QAH8aZKDFu4/8tHd4JDP94RNj62866YU='),
+						desc: _d('U2FsdGVkX1/18PO6on4yEzZH15xDah2Y7l/wnmTS8LX8Rp2B08LhMk8MdCrw/+n8{CR}1/tfHuTcANRXQAx2mbsllm3uaVBtOkTev11n9GGD2/tSKk9cYLQ8awfPDWNO9RK1{CR}'),
+					},
+					{
+						id: _d('U2FsdGVkX1/Qyv00MT+D97frhKXPXUqRwM6nLLEQRMdv7tl6aA05VYg3CvKnRm2y{CR}RdUMPArASqq1j+XJcQHLhg=='),
+						title: _d('U2FsdGVkX182GZuJ5CWtlKbcsgNgwCid01P/27jpO10='),
+						desc: _d('U2FsdGVkX1/oBcFcJ4PrT4c12F/lMbBPfl3H6rw+WzUYBHXyZOtGBee3bq7XvwHi{CR}xXg5ngk2binp5sy5FDWwxa3Qw2X7TapWsHqBzAdH2cecldCv6tN7NC55ocGPmzPU{CR}c7nL61ZlOnda04xPQOOA0w=='),
+					},
+					{
+						id: _d('U2FsdGVkX18A0KWGz7OsFSGsOtuOh7Fkb+cVssF2x/VE4nlBcqf9xca9PZ3BgypD{CR}ZGigS0bomdB409BtippYag=='),
+						title: _d('U2FsdGVkX19dLiOfOKmPKI1wGX7h5ioWnY2gTdlj0EQ='),
+						desc: _d('U2FsdGVkX1/qcBQVthvoFcmBur0fTsknlqu4pMfvVjiKq+rCfpzQGsGOZ42uuHIT{CR}H+Tr2Ju1Uv2y4BoQPgRsy9zxoLbqk9l2oYLWYcu91uGIxMKsmdM9eNH4uMcQCQmA{CR}2Tmw/MumbOdaw8+4A1cuVELqsaoJxyDDfdNNufqgPL8='),
 					},
 				],
 			},
 			{
-				id: "af66dd27-a29e-9ec6-6724-c763764c0843",
-				title: "2=Vikas",
-				desc: "",
+				id: _d('U2FsdGVkX18YdJeVM/z+oZNtnCzMPSqn7pZk9pqZJATyGDLM/dRW351Utm6NyOJQ{CR}hWyKeRrgRwxG5fMxcDIH8g=='),
+				title: _d('U2FsdGVkX19H7MJdpQipFtvDuBf7TANztyRNfUinmjo='),
+				desc: _d('U2FsdGVkX1898sm1CEekEq5mMcDaI9P9eU95Bijo4eb54qs9rKKhvZg/IiuokjVp{CR}58ZQvcdA3PhueqsF4FucbAQsFSNOHdizS+Q9e+WYa7k='),
 				groups: [
 					{
-						id: "ec51cdc0-f35c-15b5-9e97-5a94269cb6ff",
-						title: "New Group",
-						desc: "",
+						id: _d('U2FsdGVkX1+X7XpXBVt472CWU40BwYtWUolZ+dyq9E1alLT22mShhbeONZSHflnd{CR}wcxI5VXyWEHzLf6IiSEs9Q=='),
+						title: _d('U2FsdGVkX1+HnivzB7RNELJJcA/8zN8/dedIJoAtkf3pqzuP+DN2KRFWsOZkaLnP{CR}'),
+						desc: _d('U2FsdGVkX19n5sJWFLSpLtl8FNijHN+2/E1v0fPqzQRHCz3xowQMOP2pJAQCVlpM{CR}eBXMt0A3E8NbJ1iSwtcRHNS0P6Ysmq/pGhvgeMp3uFIvn+t7sG+ljWjjQBcmQ9pP{CR}'),
+					},
+					{
+						id: _d('U2FsdGVkX1/7Bo8pLgrFjqzUVgM1mKihnG6g65A983vRfmsjRz9C292Y0pALk37Z{CR}XKxI/FBqXRJui7U9KqKBlA=='),
+						title: _d('U2FsdGVkX18Lw8xISCqk74+sBHHWwHMd/tTVk9H0J8c='),
+						desc: _d('U2FsdGVkX1/JOKYcfS4X/N6rYZzaPkE0ROB5Q+HqCRGhikm1G04JPCo5hgvQkzH0{CR}SvpjcLUAbV0k3JWtJX/8kGJzc46+ZH1OfjAQTalBtCfEXubSnfQo+PFLxUMMXQ6w{CR}Ur6nniBEki1lq6DIfxwhGQ=='),
+					},
+					{
+						id: _d('U2FsdGVkX1+qS1gU29/UaA/wrTXi3gHHnr5UnK7EHfiWIDCPr6nsh/rtR5gi8hdJ{CR}lJ3+HzXUEJf+cnGQIUaTpg=='),
+						title: _d('U2FsdGVkX19u4qCK0CpbfQNc+5FqugA1WNXUli0T/7Q='),
+						desc: _d('U2FsdGVkX18gaiB7EEovh0N3iijJONz1o7PqgQHXquCmE4beZlCTI2vNjXCquDlb{CR}A7a3IXP4wOk5vHgxnj7MU8berYEj/ykow6dSWr5k/yPSZTB85qEtK7gL2KRojc+h{CR}PUwPnJWaxAXkL5xYbxaT+w7rVCqCCxhPI+vfH576iUw='),
+					},
+				],
+			},
+			{
+				id: _d('U2FsdGVkX1/eOn/jNhmasUEwJOuCQ8VY2X1ua3z1ODJKT23dm3hdcSRYZfhL3wOP{CR}03gNMSR73EbNzD+vakd/oQ=='),
+				title: _d('U2FsdGVkX1/BnKBUre3OtxqQo9cKyZEQTB2Z5HT2I2s='),
+				desc: _d('U2FsdGVkX1/Q/zJ4GFECK0qXGzTn2oCXhu+x2xLhKOSfRwwCrTfYw+OePwkRFpXM{CR}ItHHggZDPfUM2svEh+eyA4AAj2Gdd7X9rQfV3WX3lZI='),
+				groups: [
+					{
+						id: _d('U2FsdGVkX19xzMiY7ilWtGMYAvDmo/wNv82q7u/YNQCZqhnQAYwbHSUGv572X0XJ{CR}JnCPuallVEE1Jst5TfCPaQ=='),
+						title: _d('U2FsdGVkX18Qo1SQLWN6GN8lhvb1wA3xpfZcX2lUYU4='),
+						desc: _d('U2FsdGVkX1/cXxV9HLm7Igt0xASy8NBpWcKLXrZUUe3fs6FNNPyw/yVR8HVjp6Mo{CR}5ZskesHZYD12+0JiXuU2R+Psd+EGX6H9lLKAjbssCZHzhIsXAaFVbKbHj27zCmkK{CR}'),
+					},
+					{
+						id: _d('U2FsdGVkX19HODhwqLyTAdD0or/8V4ITCfCrSY/VLcqTUSARm16v9LfV9BVgn6Sr{CR}wokQwPgG3M/u544xyoaTOA=='),
+						title: _d('U2FsdGVkX19m7POWVsXesZ9nfVTuQ5ch4G1MyoMaGc8='),
+						desc: _d('U2FsdGVkX19jeGzve6+E4+AjrIgZHTUt4FLDMDc/8BYeuNDkE02n014X21EVQyMd{CR}AKwM+RuwTpbxiJca4OJOA/OBiQ8sHdrxVPbDo8QrZ0aIv3bdQL4/5pkBMJd2Lxsp{CR}8hmotDMknBaWaeDTdgNb2QkjkToYgVPhrdoEHD1FgII='),
+					},
+					{
+						id: _d('U2FsdGVkX1/tSQhMpslBgqFb2FiJ1BTNEBeEf2SbPDfcYT9NFSG2HHfw/9rhJknm{CR}RBPewm93+2v6Fz3gYOFkNQ=='),
+						title: _d('U2FsdGVkX19maKVUp7qDxV+dxS7O83nkQN+AWddVccE='),
+						desc: _d('U2FsdGVkX1+I1MsQc7RBMSntkYAUJKJ8mN2c4XTbOHmk+yOpxL5ep8eEX3XV7+s1{CR}6OWQoxek3sOJl9HymVKiVIVrIR+y99d4lu3ivdlU0BJPS7ShJAYgZNB5KIkjBex5{CR}YHTBDKbneb9e5iix/bw5Pw=='),
+					},
+					{
+						id: _d('U2FsdGVkX1+xpzZFxu+XxFGQ0GEEZpJ0OuGvPVLu/t+5ZF2IqsQ7LY+b6PiMQ/3j{CR}sQhwZpHOg9ZoDDusV+jC5A=='),
+						title: _d('U2FsdGVkX1+VZlsA+mN8bqmyVdkAkQ5v3uyNnZDI/rk='),
+						desc: _d('U2FsdGVkX1+QWNddQsySUDL/W1iNaLs3lf6TcrPqbOJOL27AIMb/Acgq+KVSSb7I{CR}3T3Hpd7Nkjh0tU/Y3ywzxXfy+26++zDGK6ztchFW7OOpbPD+BMENr8xItfSODEk7{CR}5uUL7FW4ZcDTyeCOd8WvdbokIonmA2Bzv1mmCHpX56Q='),
+					},
+				],
+			},
+			{
+				id: _d('U2FsdGVkX18cFnBatpyD27s1Uk20IM0XWxflhn5BotKPhcZXlq5+69mAmar4Q/PE{CR}hxiQoHJr6ymVvJlrkioDKw=='),
+				title: _d('U2FsdGVkX18I0x0l/FoVXHLnf8gyIb+ze0at4OyQhkw='),
+				desc: _d('U2FsdGVkX1/yrz/+gRwXFl8X5LbI/ZYEoEBAulTOIedCqBu27mF6VKwqNIAdf8Uc{CR}9aK3s5K3Kga4LW4wjvczt6VRR5NXgYk1+7eN6IkAZodXXmstB3VVxIPowUlwnsgI{CR}NFMGheG74ky/9b05mCc4wA=='),
+				groups: [
+					{
+						id: _d('U2FsdGVkX1/LxJ2C9trzZBsaUoQQ4DvPe/tJQSduiuNMyzuWhRn5pS6BPb3+q3AC{CR}yEa+nABR9b96CvuGUVDslQ=='),
+						title: _d('U2FsdGVkX18pZNn5Nvm9GUWkAWmWsSZiHaP7flQ2a7E='),
+						desc: _d('U2FsdGVkX196n/QlOVScIfbs+0flHVLmDW7yahc1jfYQDbj0eLxn3vu7jXceMMgg{CR}KmVDs5i+fho+f3w13L74abVlYAhz058cWag4oYkcEakjfRKstbTx1o4zQR7e5Lqp{CR}YgkV8qzC/Y/ejH3na6Ir+g=='),
+					},
+					{
+						id: _d('U2FsdGVkX1+bOzW/0WURXluFoFWW/I7JsJrOEhEErX8oB8LcKzIfs7x0d8uCQmrf{CR}eLiuxpAlpa6mjJaSkCXrRQ=='),
+						title: _d('U2FsdGVkX1830z/+jAYMzd6y8kTD2jLU+/UqDN5t4PI='),
+						desc: _d('U2FsdGVkX1/t4+tS9B7upRhUJ0dEVSkbU+3hadxJbVuLDt64VDBXzzCf8yQOaVSv{CR}GznLwTq0jtLyQjaS5M6fPooVqj2ZPfn7esmFRQzq++0='),
+					},
+					{
+						id: _d('U2FsdGVkX1/EYJ6LBjvAj99rM2DAXdzzttlOPId+AjFhKTdKBnU2QBCCozwazYgB{CR}4elpfEjnpTuTk3iaRstzIA=='),
+						title: _d('U2FsdGVkX18hsXIg3wFtdRjXJQLZDG7QXGlC/a5/qBM='),
+						desc: _d('U2FsdGVkX1/KTKAhvHQqZAz/p1PgNyNSAwAjJi4NhOgAsIkwi8TnFuqwg7Ye+/z1{CR}QDDJVNS4M96Q+0dxhqxmoM/VS9xvMKtRos8UrLwRYk602lo62MuCHVQ31+8iMmFe{CR}fT8T6j8MPZ7J4zGfiZBHTA=='),
+					},
+					{
+						id: _d('U2FsdGVkX18csAyyectNzy5WNGbfSZ9vlUcH0UicQCaPyTN0Fj8am6OOuJoAf6wg{CR}Ixt8FeJvYw5mWYz6EPuEqw=='),
+						title: _d('U2FsdGVkX18JZa5i0vO/h6w5z7QCwF35h3giYnUrGpg='),
+						desc: _d('U2FsdGVkX1/t/sA+6ypKIsumMol0aVU5MHkyrKMZnGdsqZD5xaTM353kphm7NbTe{CR}0XD7cMG/ecYR51RA3Co2YfoaDAS2SECsVKN7r/411Hx0aodsOoO+1iNywAhvQGwr{CR}'),
+					},
+					{
+						id: _d('U2FsdGVkX1+hR5zG5qxDmSrn+g64tW8rIugvQvN2WFOeE5DneQx7uv/hXpMeKcnu{CR}65jNxO7EJJZ4WWm+Lt77xQ=='),
+						title: _d('U2FsdGVkX1/tFXOEccD3KvFCrXMaQSum9X0fmd8Z7kA='),
+						desc: _d('U2FsdGVkX188AnBKxn7J/k6aGTlp07QZ9yxRXOrGpvMG3Q8PuJTrfCnAux1kdtqW{CR}fywQ4IWeXYjKydJHqj0aCoWlPCqsoVRYlQt2X+PhlBy8rbsZ/txl/S4ui5NZLksp{CR}hMJjN8EgDtrURkVSFSCSoA=='),
+					},
+					{
+						id: _d('U2FsdGVkX1/lcmR1dqrQ9VGwfCdTQZH5UNIC2mMfLdmXXxirENtEK3NRYsAkZCCj{CR}BiHjquqY+j2pGoT9ocyt2A=='),
+						title: _d('U2FsdGVkX19cUrapq2xweBW3EjphNlHjHNpD6ckyg5w='),
+						desc: _d('U2FsdGVkX1/unCtE4tMKPAf7BvG1RZU7vNJdBYofQ9341hkcRzD5fiegxEAgHgvL{CR}/6qEzp4o1K/HsF+FprVODH65I4LudwgrqRnEKJZk5WYQymd1/7owblEZqQuootEH{CR}2+VPmPXItBRO6qVH0TX5CG2bytFiNwDi6E3EhkrRXoM='),
+					},
+				],
+			},
+			{
+				id: _d('U2FsdGVkX1+pE5IQoDV9rvfSr2Xv6vPdh+MoDuz18pivrCIAAB1y2I3UGmP3Tpad{CR}QSlRBv1rdJcyJgPndky8Sg=='),
+				title: _d('U2FsdGVkX1+gAvcwRPvabjoozTY41llhUIURrdWOSmo='),
+				desc: _d('U2FsdGVkX19g7v1iOg5wP6O51reWs9Dqp3oBdQlv3/azHr49CRXcl2NJ5OyEVE5I{CR}lR80cwTRiif5MCqtN7GIwVRZckvslCDzZYfMP6WhKpE='),
+				groups: [
+					{
+						id: _d('U2FsdGVkX1/jTbwZJMGvG0R3etDTfIus5L085+iXqe9eKYfFCaUBexac8A8WaAXJ{CR}LHg2cI5fCSvhG9Q6FEq63Q=='),
+						title: _d('U2FsdGVkX18luyI+WlVUv8DhMc9b5cX/F6Iujjl4fns='),
+						desc: _d('U2FsdGVkX180ahAI1u7IBoR+Nbp+ocOCMsUDxjx3KxDi+g+LwJq241IlqK5A63s4{CR}LahPQ9935lakJbGQtx+C3syS8mkz8laYuBUOd6kA/ngaEVjmWjI6I2nUuGfr78s4{CR}Q5EuHVE8+k0XJHVX0JS28g=='),
+					},
+					{
+						id: _d('U2FsdGVkX1/Gcr/SSZKaY2uD0PsnPgFzT31hrWjcCdBzUAYhuoNUJJfNSVeiLb5w{CR}YHOYdFhD4eHsZ/kqqzx91A=='),
+						title: _d('U2FsdGVkX1/8i2csF4QN1IKaZJEkfxieSL3m9N/GJMM='),
+						desc: _d('U2FsdGVkX18s2yAb/+nNpE7oTwuvkkn9voKbIoso9SFdqnqaNHulZSeN/JJkezdM{CR}d66/7l8b3VMREkD5pS/o/zpUZIh+3su5ZbnQ6CBod/Lb2+2GcrNC3Xh2XA9ww6D8{CR}vZt8B7T+u7RBKHDmEYS994PA8sYpJOQHdu+AEusCXqc='),
 					},
 				],
 			},
@@ -42,216 +154,58 @@ spaData = {
 	},
 	items: [
 		{
-			id: "2",
-			title: "HDFC 1",
-			desc: "115584 -- tag 2",
-			fav: "yes",
+			id: _d('U2FsdGVkX18taGVA+cbi4Z8kHcKj5Efpj6rNlxNtZ+10/Cnwjr0KB0rAPoqhD+qb{CR}IMpBzlsBG+HVPlLLJeLCiQ=='),
+			title: _d('U2FsdGVkX18zLbY52+yY0z1Lt18fXZ2/tMvFsFy/1Eo='),
+			desc: _d('U2FsdGVkX18T6ZchSMjYXQDxulraKJ2J8g8jphDESt0='),
+			fav: _d('U2FsdGVkX18q8jPll8OVcOM+M3tkWj/KA7V7ebna24o='),
 			cat: [
 				{
-					id: "32fa1b67-0140-6ac4-ba7b-d49e58f3bb22",
+					id: _d('U2FsdGVkX19kc2X8CUKPb9tppKvIrqhyyRmo4CBFXpEUyvQpUY2L83CDWRYjMNyT{CR}E+3zyQsi+D4PYVWUUga1cA=='),
 					groups: [
-						"e3c32433-1bd7-4f97-e8fe-fe974a6ed4b0",
+						_d('U2FsdGVkX1+5obOq3APao+Cmhh5iBujc4JXzl8YIDLvos9JNxJQAAIwQj294DFzp{CR}8cPLA+xOL35//lvOZJ+rLg=='),
 					],
 				},
 			],
 			tags: [
-				"tag 1",
-				"tag 3",
-				"tag 4",
+				_d('U2FsdGVkX192EhlbXHahhbscpLgdtSXty9p9oQBfdiA='),
 			],
-			url: "http://www.hdfcbank.com",
-			login: "2300383",
+			url: _d('U2FsdGVkX18t0+dkeLh/phkGOJum+36/hAOdbaNBz9g='),
+			login: _d('U2FsdGVkX19qzWm45nagG//bKM/mUxyR5VdE5Cm+vzQ='),
 			pwds: [
-				{
-					date: "2013/03/21",
-					exp: "",
-					pwd: [
-						{
-							name: "Login",
-							value: "PWD2",
-						},
-						{
-							name: "Transaction",
-							value: "PWD22",
-						},
-					],
-				},
-				{
-					date: "2012/12/25",
-					pwd: [
-						{
-							name: "Login",
-							value: "PWD1",
-						},
-						{
-							name: "Transaction",
-							value: "PWD11",
-						},
-					],
-				},
 			],
-			info: "A lot of details can come here",
+			info: _d('U2FsdGVkX19trkgbpHY+MXzFWdY9vsDKQm7id39JaNA='),
 			moreInfo: [
-				{
-					name: "Secret Questions 3",
-					details: "More Details 11",
-				},
-				{
-					name: "More Info22",
-					details: "More Details 22",
-				},
 			],
 			ref: [
-				"3",
 			],
 			notes: [
-				{
-					date: "2012/12/15",
-					note: "Some note 1",
-				},
-				{
-					date: "2012/12/25",
-					note: "Some note 3",
-				},
-			],
-			trash: "no",
-		},
-		{
-			id: "3",
-			title: "HDFC 2",
-			desc: "115584",
-			fav: "no",
-			trash: "no",
-			cat: [
-			],
-			tags: [
-				"tag 3",
-			],
-			url: "http://icicibank.com",
-			login: "2300383",
-			pwds: [
-				{
-					date: "2013/03/21",
-					exp: "180",
-					pwd: [
-						{
-							name: "Login",
-							value: "PWD2",
-						},
-						{
-							name: "Transaction",
-							value: "PWD22",
-						},
-					],
-				},
-				{
-					date: "2012/12/25",
-					pwd: [
-						{
-							name: "Login",
-							value: "PWD1",
-						},
-						{
-							name: "Transaction",
-							value: "PWD11",
-						},
-					],
-				},
-			],
-			info: "A lot of details can come here",
-			moreInfo: [
-				{
-					name: "More Info12",
-					details: "<b>More Details 11</b>",
-				},
-				{
-					name: "More Info22",
-					details: "More Details 22",
-				},
-			],
-			ref: [
-				"2",
-			],
-			notes: [
-				{
-					date: "2012/12/15",
-					note: "Some note 1",
-				},
-				{
-					date: "2012/12/15",
-					note: "Some note 2",
-				},
 			],
 		},
 		{
-			id: "1",
-			title: "Yahoo Mail",
-			desc: "Yahoo e-mail account",
-			fav: "yes",
+			id: _d('U2FsdGVkX1+TPvzbyrN4Uc3vsMQw0IuUHBvJAkkBaoXw8HnK6hl8tC8uEn5CBxaB{CR}ilTLf6ofeyIVpOEdXjaWpg=='),
+			title: _d('U2FsdGVkX192saSBWHUqkqOYTVtzbs3bzlLYisaOBGk='),
+			desc: _d('U2FsdGVkX19xi6LZ2evCgT6MZNlbTh5+jGAw4jUxHjA='),
+			fav: _d('U2FsdGVkX19joa3vfIelhtBKAhmu+w3E1nKy3X7E0YA='),
 			cat: [
+				{
+					id: _d('U2FsdGVkX19642s94m0ARK7ssxoz+aKxzhGJmAb8Xsvjgk2ja+pnqWDx/d3uMYD7{CR}F0lgUSDgxv/n7RJwPAjMdQ=='),
+					groups: [
+						_d('U2FsdGVkX19pDVvyBJSxBOnmJj1IJ06KaYCrr5E66wAb3ZN8gbSZilUgYnloLUZ0{CR}dasYuXnpIoXEIddjONwqeg=='),
+					],
+				},
 			],
 			tags: [
-				"tag 1",
-				"tag 2",
-				"tag 3",
 			],
-			url: "http://mail.yahoo.com",
-			login: "vikasburman@yahoo.com",
+			url: _d('U2FsdGVkX18eqwkJrNIdXE5oljVXB6jCsFmgch8OHJ0='),
+			login: _d('U2FsdGVkX1+JCDxYKDpVYccYBEPhleebG848Hu3GRms='),
 			pwds: [
-				{
-					date: "2013/03/21",
-					pwd: [
-						{
-							name: "",
-							value: "PWD - NEW",
-						},
-					],
-				},
-				{
-					date: "2012/12/25",
-					pwd: [
-						{
-							name: "",
-							value: "PWD1",
-						},
-					],
-				},
-				{
-					date: "2011/10/22",
-					pwd: [
-						{
-							name: "",
-							value: "PWD1",
-						},
-					],
-				},
 			],
-			info: "A lot of details can come here",
+			info: _d('U2FsdGVkX1/2xUruGxUlkvBQNLo5A2BAOGvZTwZrZ24='),
 			moreInfo: [
-				{
-					name: "More Info1 ",
-					details: "More Details 1",
-				},
-				{
-					name: "More Info2 ",
-					details: "More Details 2",
-				},
 			],
 			ref: [
 			],
 			notes: [
-				{
-					date: "2012/12/15",
-					note: "Some note 1",
-				},
-				{
-					date: "2012/12/21",
-					note: "Some note 2",
-				},
-				{
-					date: "2012/12/25",
-					note: "Some note 3",
-				},
 			],
 		},
 	],

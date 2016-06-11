@@ -626,19 +626,22 @@
 				// default items in cloud
 				var allTags = $('<div>').append(
 					$('<span>').attr('style', 'font-size:25px;').append(
-						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 1); }).append("Favorites")).append(" "));
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 1); }).append("Favorites").attr('title', 'Marked as favorite')).append(" "));
 				allTags.append(		
 					$('<span>').attr('style', 'font-size:20px;').append(
-						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 2); }).append("Uncategorized")).append(" "));
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 2); }).append("Uncategorized").attr('title', 'Not yet categorized')).append(" "));
 				allTags.append(		
 					$('<span>').attr('style', 'font-size:18px;').append(
-						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 3); }).append("Expiring")).append(" "));
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 3); }).append("Expiring").attr('title', 'Expiring soon')).append(" "));
 				allTags.append(		
 					$('<span>').attr('style', 'font-size:16px;').append(
-						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 4); }).append("Expired")).append(" "));
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 4); }).append("Expired").attr('title', 'Already expired')).append(" "));
 				allTags.append(		
 					$('<span>').attr('style', 'font-size:14px;').append(
-						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 5); }).append("Trashed")).append(" "));
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 5); }).append("Trashed").attr('title', 'Deleted, but can be restored')).append(" "));
+				allTags.append(		
+					$('<span>').attr('style', 'font-size:12px;').append(" | ").append(
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 6); }).append("(all)").attr('title', 'All except which are trashed')).append(" "));
 				allTags.append("<br /><hr>");
 				
 				//preset variables as to create no confusion
@@ -1380,8 +1383,8 @@
 			
 			// properties
 			this.title = "Simple Passwords App";
-			this.version = "0.9.3";
-			this.versionId = 0.93;
+			this.version = "0.9.4";
+			this.versionId = 0.94;
 			this.dataFormatVersionId = 1;
 			this.copyright = "&copy; 2013-2016, Vikas Burman. All rights reserved.";
 			this.tagline = "Simple, smart, secure, and sufficient portable app to store all your passwords.";
@@ -1390,9 +1393,9 @@
 			this.server = {
 				// latest version info (this gets updated by loading a version info file from server)
 				latestVersion: {
-					versionId: 0.93,
+					versionId: 0.94,
 					url: "https://github.com/vikasburman/spa",
-					title: "Version 0.9.3",
+					title: "Version 0.9.4",
 				}
 			};
 			this.settings = {
@@ -1634,7 +1637,7 @@
 				navigate("search", true);
 				
 				if (typeof searchType === 'undefined') {
-					searchType = spa.app.state.searchType; // 0-Default, 1-favorites, 2-uncategorized, 3-Expiring, 4-Expired, 5, Trashed, 6-A specific tagged items
+					searchType = spa.app.state.searchType; // 0-Default, 1-favorites, 2-uncategorized, 3-Expiring, 4-Expired, 5-Trashed, 6-All, 7-A specific tagged items
 				};
 				
 				// if something is there to search
@@ -1690,7 +1693,11 @@
 						searchText = "trashed";
 						$("#searched").val(searchText).css('color', 'red');
 						break;
-					case 6: // specific tag
+					case 6: // all
+						searchText = "all";
+						$("#searched").val(searchText).css('color', 'red');
+						break;
+					case 7: // specific tag
 						searchText = $("#searched").val();
 						if (searchText.length === 0) {
 							searchText = spa.app.state.searchText;
@@ -1827,7 +1834,14 @@
 						});
 						isIncludeTrashed = true;
 						break;							
-					case 6: // a specific tag
+					case 6: // all
+						$.each(spa.data.items, function(i, item) {
+							if (item.trash !== "yes") {
+								items.push(item); 
+							};
+						});
+						break;							
+					case 7: // a specific tag
 						$.each(spa.data.items, function(i, item) {
 							if (item.tags) {
 								$.each(item.tags, function(i, tag) {
@@ -2300,7 +2314,7 @@
 			};
 			function onSelectTag(tag) {
 				$("#searched").val(tag);
-				onSearch(null, 6);
+				onSearch(null, 7);
 			};
 			function onShowPwdHistory() {
 				// toggle password(s) history
