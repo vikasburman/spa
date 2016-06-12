@@ -2166,7 +2166,7 @@
 				var seeAlsoList = $("#seeAlsoList");
 				seeAlsoList.empty();
 				if (isArray(item.ref) && item.ref.length > 0) {
-					$("#seeAlsoButton").removeClass('disabled');
+					$("#seeAlsoButton").removeClass('disabled').html("See Also (" + item.ref.length.toString() + ")");
 					// all links that are defined
 					$.each(spa.data.items, function(i, itm) {
 						if (item.ref.indexOf(itm.id) !== -1) {
@@ -2177,7 +2177,7 @@
 						};
 					});
 				} else {
-					$("#seeAlsoButton").addClass('disabled');
+					$("#seeAlsoButton").addClass('disabled').html("See Also");
 				};
 
 				// show other header information
