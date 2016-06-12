@@ -5,7 +5,7 @@ spaData = {
 		encrypt: "no",
 		private: "no",
 		searchDepth: "",
-		lastUpdate: "2016/06/12 09:34:44",
+		lastUpdate: "2016/06/12 11:09:07",
 		appVersionId: "0.94",
 		dataFormatVersionId: "1",
 		passwordTypes: [
@@ -134,5 +134,43 @@ spaData = {
 		],
 	},
 	items: [
+		{
+			id: "99ae5c2c-c631-c548-2fcc-3c0fab9dd12e",
+			title: "New Data",
+			desc: "",
+			fav: "no",
+			cat: [
+				{
+					id: "af66dd27-a29e-9ec6-6724-c763764c0843",
+					groups: [
+						"ec51cdc0-f35c-15b5-9e97-5a94269cb6ff",
+					],
+				},
+			],
+			tags: [
+			],
+			url: "",
+			login: "aa",
+			pwds: [
+				{
+					date: "2016/06/12",
+					exp: "",
+					pwd: [
+						{
+							name: "Login",
+							value: "aaa",
+						},
+					],
+				},
+			],
+			info: "",
+			moreInfo: [
+			],
+			ref: [
+			],
+			notes: [
+			],
+			private: "no",
+		},
 	],
 };
