@@ -4,7 +4,7 @@ spaData = {
 		pin: "1234",
 		encrypt: "no",
 		searchDepth: "",
-		lastUpdate: "2016/06/11 14:42:02",
+		lastUpdate: "2016/06/12 08:29:55",
 		appVersionId: "0.94",
 		dataFormatVersionId: "1",
 		passwordTypes: [
@@ -37,13 +37,13 @@ spaData = {
 					},
 					{
 						id: "e5a2c1a9-c165-5a13-0e46-47ed855e9406",
-						title: "4=Memberships",
-						desc: "Membership accounts created on various websites which are used for professional interactions.",
+						title: "4=Certifications",
+						desc: "Access to various digital certificates related to professional life.",
 					},
 					{
 						id: "77740f69-4b00-d268-4a05-4991da87c6e4",
 						title: "5=Subscriptions",
-						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
+						desc: "Membership accounts created on various websites which are used for professional interactions.",
 					},
 				],
 			},
@@ -59,13 +59,8 @@ spaData = {
 					},
 					{
 						id: "115dcb6e-6ae8-44ef-c34f-1dc1e82eb348",
-						title: "2=Memberships",
+						title: "2=Subscriptions",
 						desc: "Membership accounts created on various websites which are used for educational interactions.",
-					},
-					{
-						id: "60c7c74f-74b1-177d-9e1f-ae4aaa512402",
-						title: "3=Subscriptions",
-						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
 					},
 				],
 			},
@@ -86,13 +81,8 @@ spaData = {
 					},
 					{
 						id: "42f0391e-9238-b5e3-e0d9-0e6413feb5b2",
-						title: "3=Memberships",
+						title: "3=Subscriptions",
 						desc: "Membership accounts created on various websites which are used for financial interactions.",
-					},
-					{
-						id: "d2822b2e-8874-2b6a-e6ae-15bb047c6581",
-						title: "4=Subscriptions",
-						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
 					},
 				],
 			},
@@ -123,13 +113,8 @@ spaData = {
 					},
 					{
 						id: "4bbf1639-3c07-7a98-78cd-faaaee7b608f",
-						title: "5=Memberships",
+						title: "5=Subscriptions",
 						desc: "Membership accounts created on various websites which are used for general interactions.",
-					},
-					{
-						id: "7d2a28df-7a50-dc52-da8a-a157c32d271a",
-						title: "6=Subscriptions",
-						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
 					},
 				],
 			},
@@ -140,73 +125,13 @@ spaData = {
 				groups: [
 					{
 						id: "25d80e8a-4321-6a9e-46a3-1dc101d331b8",
-						title: "1=Memberships",
+						title: "1=Subscriptions",
 						desc: "Membership accounts created on various websites which are used for leisure interactions.",
-					},
-					{
-						id: "6105482e-b663-332b-e740-ddcf0fb1fcdc",
-						title: "2=Subscriptions",
-						desc: "Accounts created on various websites, portals, etc. which are used for referring back information.",
 					},
 				],
 			},
 		],
 	},
 	items: [
-		{
-			id: "9b81bc0e-bd42-276e-6d20-7287a7b268ce",
-			title: "New Dataasad",
-			desc: "",
-			fav: "no",
-			cat: [
-				{
-					id: "af66dd27-a29e-9ec6-6724-c763764c0843",
-					groups: [
-						"ec51cdc0-f35c-15b5-9e97-5a94269cb6ff",
-					],
-				},
-			],
-			tags: [
-				"tag1",
-			],
-			url: "",
-			login: "",
-			pwds: [
-			],
-			info: "",
-			moreInfo: [
-			],
-			ref: [
-			],
-			notes: [
-			],
-		},
-		{
-			id: "a356c6ea-8fd0-c910-41c0-4315f30b7585",
-			title: "sfasf",
-			desc: "",
-			fav: "no",
-			cat: [
-				{
-					id: "af66dd27-a29e-9ec6-6724-c763764c0843",
-					groups: [
-						"ec51cdc0-f35c-15b5-9e97-5a94269cb6ff",
-					],
-				},
-			],
-			tags: [
-			],
-			url: "",
-			login: "",
-			pwds: [
-			],
-			info: "",
-			moreInfo: [
-			],
-			ref: [
-			],
-			notes: [
-			],
-		},
 	],
 };

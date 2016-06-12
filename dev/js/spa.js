@@ -1722,6 +1722,7 @@
 					});
 					break;							
 				case 7: // a specific tag
+					searchText = searchText.toLowerCase();
 					$.each(spa.data.items, function(i, item) {
 						if (item.tags) {
 							$.each(item.tags, function(i, tag) {
