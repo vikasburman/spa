@@ -1750,6 +1750,30 @@
 			$("#searchContent").empty().append(theItems.data);
 			$("#searchItemsCount").text(theItems.count.toString());
 		};
+		function itemAdditionalDetailsForPrint(item) {
+			var itemAD = "";
+			if ((isArray(item.moreInfo) && item.moreInfo.length > 0)) {
+				itemAD = "<br /><span><small>";
+				$.each(item.moreInfo, function(i, info) {
+					itemAD += (i === 0 ? "" : ", ") + "<b>" + info.name + ":</b> " + info.details.replace(/{CR}/g, " - ") 
+				});
+				itemAD += "</small></span>";
+			};
+			return itemAD;
+		};
+		function itemNotesForPrint(item) {
+			var itemNT = "";
+			if ((isArray(item.notes) && item.notes.length > 0)) {
+				itemNT = "";
+				item.notes.sort(function(a, b){ 
+					var a1= a.date, b1= b.date; if(a1== b1) return 0; return a1> b1? 1: -1;
+				});						
+				$.each(item.notes, function(i, note) {
+					itemNT += "<br /><span><small><b>" + note.date + ":</b> " + note.note + "</small></span>";
+				});
+			};
+			return itemNT;
+		};			
 		function onPrint() {
 			// go search section
 			navigate("print", true);
@@ -1764,7 +1788,7 @@
 			var table = $('<table>').attr('class', 'table table-striped');
 			var itemPwds = null;
 			$.each(spa.data.items, function(index, item) {
-				if (item.trash !== "yes") {
+				if (item.trash !== "yes" && !(item.private === "yes" && spa.data.settings.private === "yes")) {
 					itemPwds = $('<span>');
 					if (isArray(item.pwds) && item.pwds.length > 0) {
 						var pwd = "";
@@ -1786,8 +1810,9 @@
 					table.append(
 						$('<tr>').append(
 							$('<td>').append(
-								$('<span>').append("<b>" + item.title + "</b><br />" + item.url + '<br /><br />' + item.desc))).append(
-							$('<td>').append("<b>Login</b>: <span class='plainData'>" + item.login + "</span><br />").append(itemPwds)));
+								$('<span>').append("<b>" + item.title + "</b><br />" + item.url + '<br /><br />' + item.desc + itemAdditionalDetailsForPrint(item) + 
+										itemNotesForPrint(item)))).append(
+							$('<td>').append(item.login !== "" ? "<b>Login</b>: <span class='plainData'>" + item.login + "</span><br />" : "").append(itemPwds)));
 				};
 			});
 			html.append(table);
