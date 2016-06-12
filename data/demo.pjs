@@ -3,8 +3,9 @@ spaData = {
 		title: "Demo Passwords",
 		pin: "1234",
 		encrypt: "no",
+		private: "no",
 		searchDepth: "",
-		lastUpdate: "2016/06/12 08:29:55",
+		lastUpdate: "2016/06/12 09:35:13",
 		appVersionId: "0.94",
 		dataFormatVersionId: "1",
 		passwordTypes: [

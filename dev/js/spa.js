@@ -43,6 +43,7 @@
 			title: "",
 			pin: "",
 			encrypt: "no",
+			private: "no",
 			searchDepth: "",
 			lastUpdate: "",
 			appVersionId: "",
@@ -52,6 +53,7 @@
 				"Transaction",
 				"PIN",
 				"TIN",
+				"TPIN",
 			],
 			categories: [
 				{
@@ -97,6 +99,7 @@
 				desc: "",
 				fav: "no",
 				trash: "no",
+				private: "no",
 				cat: [
 					{
 						id: "a837d30e-2584-c67c-d19c-3f7a6b3a0bc6",
@@ -716,6 +719,12 @@
 			} else {
 				$("#_fav").val("no"); 
 			};
+			// private
+			if (item.private) { 
+				$("#_private").val(item.private); 
+			} else {
+				$("#_private").val("no"); 
+			};			
 			// desc
 			if (item.desc) { 
 				$("#_desc").val(item.desc); 
@@ -904,6 +913,8 @@
 			};
 			// favorite
 			item.fav = $("#_fav").val();
+			// private
+			item.private = $("#_private").val();			
 			// desc
 			item.desc = $("#_desc").val(); 
 			// url
@@ -1237,7 +1248,8 @@
 			});
 		};
 		function listItems(items, includeTrashed) {
-			var data = "";
+			var data = "",
+				count = 0;
 			if (isArray(items) && items.length > 0) {
 				items.sort(function(a, b){ 
 					var a1= a.title, b1= b.title; if(a1== b1) return 0; return a1> b1? 1: -1;
@@ -1247,7 +1259,9 @@
 				$.each(items, function(index, item) {
 					isShow = true;
 					if (item.trash === "yes" && !includeTrashed) { isShow = false; }
+					if (isShow && item.private === "yes" && spa.data.settings.private === "yes") { isShow = false; }					
 					if (isShow) {
+						count++;
 						data.append(
 							$('<tr>').append(
 								$('<td>').append(
@@ -1258,7 +1272,7 @@
 					};
 				});
 			};	
-			return data;
+			return {data: data, count: count};
 		};
 		
 		// properties
@@ -1732,8 +1746,9 @@
 					});
 					break;
 			};
-			$("#searchContent").empty().append(listItems(items, isIncludeTrashed));
-			$("#searchItemsCount").text(items.length.toString());
+			var theItems = listItems(items, isIncludeTrashed);
+			$("#searchContent").empty().append(theItems.data);
+			$("#searchItemsCount").text(theItems.count.toString());
 		};
 		function onPrint() {
 			// go search section
@@ -1901,7 +1916,7 @@
 					};
 				});
 			});
-			$("#grpData").empty().append(listItems(items));
+			$("#grpData").empty().append(listItems(items).data);
 		};
 		function onSelectPrevData() {
 			if (prevDataId) {
@@ -1939,7 +1954,8 @@
 					prevDataId = lastDataId;
 					if (index < spa.data.items.length - 1) {
 						for (var ii=index+1; ii< spa.data.items.length; ii++) {
-							if (spa.data.items[ii].trash !== "yes") {
+							if (spa.data.items[ii].trash !== "yes" &&
+									!(spa.data.items[ii].private === "yes" && spa.data.settings.private === "yes")) {
 								nextDataId = spa.data.items[ii].id;
 								break;
 							};
@@ -2853,7 +2869,10 @@
 				// encrypt
 				$("#_file_encrypt").val(spa.data.settings.encrypt);
 				
-				// #PREFERENCES# //	
+				// #PREFERENCES# //
+				// private items
+				$("#_item_private").val(spa.data.settings.private);
+				// search depth					
 				$("#_search_depth").val(spa.app.state.settings.searchDepth);
 				
 				// #CATEGORIES# //	
@@ -2893,6 +2912,9 @@
 			spa.data.settings.encrypt = $("#_file_encrypt").val();
 			
 			// #PREFERENCES# //	
+			// private items
+			spa.data.settings.private = $("#_item_private").val();
+			// search depth				
 			spa.data.settings.searchDepth = $("#_search_depth").val();
 			// also update in state
 			spa.app.state.settings.searchDepth = spa.data.settings.searchDepth;
