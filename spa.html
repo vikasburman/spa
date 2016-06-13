@@ -512,6 +512,7 @@
 			var prevDataId = "";
 			var displayDataId = "";
 			var nextDataId = "";
+			var clipboard = null;
 			
 			// private support functions
 			function saveState() {
@@ -2251,7 +2252,11 @@
 							pwdList.append(
 								$('<li>').append(
 									$('<i>').append(p.name + ': ').append(
-										$('<span>').attr('class', 'keyData').append(p.value))));
+										$('<span>').attr('class', 'clipboard hand keyData')
+												   .attr('title', 'Click to Copy')
+												   .attr('id', '__pwd__' + i.toString())
+												   .attr('data-clipboard-target', '#__pwd__' + i.toString())
+												   .append(p.value))));
 						});
 					};
 				} else {
@@ -2314,27 +2319,6 @@
 					itemAdditionalDetails.hide();
 				};
 
-				// notes
-				var itemNotes = $('#itemNotes');
-				itemNotes.empty().show();
-				if (isArray(item.notes) && item.notes.length > 0) {
-					itemNotes.append(
-						$('<h4>').text("Notes"));
-					item.notes.sort(function(a, b){ 
-						var a1= a.date, b1= b.date; if(a1== b1) return 0; return a1> b1? 1: -1;
-					});		
-					var nd = $('<table>').attr('class', 'table');
-					$.each(item.notes, function(i, note) {
-						nd.append(
-							$('<tr>').append(
-								$('<td>').append(
-									$('<b>').append(note.date)).append(": " + note.note)));
-					});
-					itemNotes.append(nd);
-				} else {
-					itemNotes.hide();
-				};
-				
 				// password(s) history
 				var pwdHistory = $('#pwdHistory');
 				pwdHistory.empty().hide();
@@ -2361,10 +2345,35 @@
 					});
 					pwdHistory.append(phd);
 				};
+
+				// notes
+				var itemNotes = $('#itemNotes');
+				itemNotes.empty().show();
+				if (isArray(item.notes) && item.notes.length > 0) {
+					itemNotes.append(
+						$('<h4>').text("Notes"));
+					item.notes.sort(function(a, b){ 
+						var a1= a.date, b1= b.date; if(a1== b1) return 0; return a1> b1? 1: -1;
+					});		
+					var nd = $('<table>').attr('class', 'table');
+					$.each(item.notes, function(i, note) {
+						nd.append(
+							$('<tr>').append(
+								$('<td>').append(
+									$('<b>').append(note.date)).append(": " + note.note)));
+					});
+					itemNotes.append(nd);
+				} else {
+					itemNotes.hide();
+				};				
 			
 				// show
 				$("#noDataLoaded").hide();
 				$("#dataItemContent").show();
+
+				// initialize clipboard events
+				if (clipboard) { clipboard.destroy(); }
+				clipboard = new Clipboard('.clipboard');
 			};
 			function onSelectTag(tag) {
 				$("#searched").val(tag);
@@ -3598,14 +3607,12 @@
 						<div class="row-fluid">
 							<div id="currentPwdBox" class="span5 well">
 								<div class="row-fluid">
-									<img data-clipboard-target="#itemLoginName" class="hand clipboard" title="Copy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAW0lEQVR42mNkgIKGhob/DEQCoFpGGJsR2YD6+nqCmhsbG+lgAEgRsQCnAcS6hvYGYPMOstxIcwG6odR3ATZ/YtOEDBixKcKXrGGugyVpsgyAqmHE6wJ8fkfOTACWlX8HDBsg/gAAAABJRU5ErkJggg=="/>
 									<strong id="itemLoginNameText">Login name: </strong>
-									<span id="itemLoginName" class="keyData"></span>
+									<span id="itemLoginName" data-clipboard-target="#itemLoginName" title="Click to Copy" class="clipboard hand keyData"></span>
 								</div>
 								<div id="itemPasswords" class="row-fluid" style="margin-top: 10px;">
-									<img data-clipboard-target="#itemPassword" class="hand clipboard" title="Copy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAW0lEQVR42mNkgIKGhob/DEQCoFpGGJsR2YD6+nqCmhsbG+lgAEgRsQCnAcS6hvYGYPMOstxIcwG6odR3ATZ/YtOEDBixKcKXrGGugyVpsgyAqmHE6wJ8fkfOTACWlX8HDBsg/gAAAABJRU5ErkJggg=="/>
 									<strong id="itemPasswordText">Password: </strong>
-									<span id="itemPassword" class="keyData"></span> 
+									<span id="itemPassword" data-clipboard-target="#itemPassword" title="Click to Copy" class="clipboard hand keyData"></span> 
 									<span id="itemPasswordExpiryText"></span>
 									<small><a href="#" id="passwordHistoryLink" style="margin-left: 5px;">(History)</a></small>
 									<br />
@@ -4215,7 +4222,7 @@
 													<option value="no" selected="selected">No, show private items</option>
 												</select>
 											</div>
-										</div>										
+										</div>
 										<div class="control-group">
 											<label class="control-label">Last updated</label>
 											<div class="controls">
@@ -4510,9 +4517,6 @@
 				},
 			],
 		};
-
-		// initialize clipboard action
-		new Clipboard('.clipboard');
 	</script>
 </body>
 </html>
