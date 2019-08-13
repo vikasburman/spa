@@ -590,6 +590,7 @@
 				spa.data.items.sort(function(a, b){ 
 					var a1= a.title, b1= b.title; if(a1== b1) return 0; return a1> b1? 1: -1;
 				});
+
 				
 				// edting features
 				if (!spa.app.canEdit) {
@@ -653,12 +654,17 @@
 				allTags.append(		
 					$('<span>').attr('style', 'font-size:16px;').append(
 						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 5); }).append("Inactive").attr('title', 'Marked as inactive')).append(" "));
+				if (spa.data.settings.private === "no") { // no=Show, yes=hide
+					allTags.append(		
+					$('<span>').attr('style', 'font-size:16px;').append(
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 6); }).append("Private").attr('title', 'Marked as private')).append(" "));
+				}
 				allTags.append(		
 					$('<span>').attr('style', 'font-size:14px;').append(
-						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 6); }).append("Trashed").attr('title', 'Deleted, but can be restored')).append(" "));
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 7); }).append("Trashed").attr('title', 'Deleted, but can be restored')).append(" "));
 				allTags.append(		
 					$('<span>').attr('style', 'font-size:12px;').append(" | ").append(
-						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 7); }).append("(all)").attr('title', 'All except which are trashed')).append(" "));
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 8); }).append("(all)").attr('title', 'All except which are trashed')).append(" "));
 				allTags.append("<br /><hr>");
 				
 				//preset variables as to create no confusion
@@ -864,6 +870,11 @@
 				} else {
 					$("#_private").val("no"); 
 				};
+				if (spa.data.settings.private === "yes") { // no=Show, yes=hide
+					$("#_private").hide();
+				} else {
+					$("#_private").show();
+				}
 				// desc
 				if (item.desc) { 
 					$("#_desc").val(item.desc); 
@@ -1382,8 +1393,8 @@
 				$("#_edit_cat").empty().append("<option value=''>(Select)</option>").attr('value', '');
 				$.each(spa.data.settings.categories, function(i, cat) {
 					$("#_edit_cat").append(
-										$('<option>').attr('value', cat.id).append(cat.title)
-									);
+						$('<option>').attr('value', cat.id).append(cat.title)
+					);
 				});
 			};
 			function listItems(items, includeTrashedOrInactive) {
@@ -1671,7 +1682,7 @@
 				navigate("search", true);
 				
 				if (typeof searchType === 'undefined') {
-					searchType = spa.app.state.searchType; // 0-Default, 1-favorites, 2-uncategorized, 3-Expiring, 4-Expired, 5-Inactive, 6-Trashed, 7-All, 8-A specific tagged items
+					searchType = spa.app.state.searchType; // 0-Default, 1-favorites, 2-uncategorized, 3-Expiring, 4-Expired, 5-Inactive, 6-Private, 7-Trashed, 8-All, 9-A specific tagged items
 				};
 				
 				// if something is there to search
@@ -1727,15 +1738,19 @@
 						searchText = "inactive";
 						$("#searched").val(searchText).css('color', 'red');
 						break;
-					case 6: // trashed
+					case 6: // private
+						searchText = "private";
+						$("#searched").val(searchText).css('color', 'red');
+						break;
+					case 7: // trashed
 						searchText = "trashed";
 						$("#searched").val(searchText).css('color', 'red');
 						break;
-					case 7: // all
+					case 8: // all
 						searchText = "all";
 						$("#searched").val(searchText).css('color', 'red');
 						break;
-					case 8: // specific tag
+					case 9: // specific tag
 						searchText = $("#searched").val();
 						if (searchText.length === 0) {
 							searchText = spa.app.state.searchText;
@@ -1872,7 +1887,14 @@
 						});
 						isIncludeTrashedOrInactive = true;
 						break;
-					case 6: // trashed
+					case 6: // private
+						$.each(spa.data.items, function(i, item) {
+							if (item.private && item.private === "yes") {
+								items.push(item); 
+							};
+						});
+						break;
+					case 7: // trashed
 						$.each(spa.data.items, function(i, item) {
 							if (item.trash === "yes") {
 								items.push(item); 
@@ -1880,14 +1902,14 @@
 						});
 						isIncludeTrashedOrInactive = true;
 						break;							
-					case 7: // all
+					case 8: // all
 						$.each(spa.data.items, function(i, item) {
 							if (item.trash !== "yes") {
 								items.push(item); 
 							};
 						});
 						break;							
-					case 8: // a specific tag
+					case 9: // a specific tag
 						searchText = searchText.toLowerCase();
 						$.each(spa.data.items, function(i, item) {
 							if (item.tags) {
@@ -2398,7 +2420,7 @@
 			};
 			function onSelectTag(tag) {
 				$("#searched").val(tag);
-				onSearch(null, 8);
+				onSearch(null, 9);
 			};
 			function onShowPwdHistory() {
 				// toggle password(s) history
@@ -4207,7 +4229,7 @@
 					</div>
 					<div id="noEncryptionMessage" class="alert alert-error hide">
 					  <b>Warning!</b> Your passwords are set to store as unencrypted. For secure storage, 
-					  change <i>File > Encryption</i> setting below to <i>Yes</i>.
+					  change <i>Preferences > Encryption</i> setting below to <i>Yes</i>.
 					</div>
 					<div class="btn-group pull-right">
 					  <button id="saveSettings" class="btn btn-large btn-success" title="Save changes in data file">Save</button>
@@ -4242,24 +4264,6 @@
 											</div>
 										</div>
 										<div class="control-group">
-											<label class="control-label">Encryption</label>
-											<div class="controls">
-												<select class="span12 dataEntry" id="_file_encrypt">
-													<option value="yes">Yes, secure my passwords by encrypting content</option>
-													<option value="no" selected="selected">No, I will encrypt data file myself</option>
-												</select>
-											</div>
-										</div>
-										<div class="control-group">
-											<label class="control-label">Privacy</label>
-											<div class="controls">
-												<select class="span12 dataEntry" id="_item_private">
-													<option value="yes">Yes, hide private items</option>
-													<option value="no" selected="selected">No, show private items</option>
-												</select>
-											</div>
-										</div>
-										<div class="control-group">
 											<label class="control-label">Last updated</label>
 											<div class="controls">
 												<input type="text" class="span12 dataEntry" id="_file_last_update" readonly>
@@ -4286,6 +4290,24 @@
 													<option value="min">Quick, Search only in title and description</option>
 													<option value="" selected="selected">Default, Search in most relevant fields</option>
 													<option value="max">Full, Search in all searchable fields</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label">Encryption</label>
+											<div class="controls">
+												<select class="span12 dataEntry" id="_file_encrypt">
+													<option value="yes">Yes, secure my passwords by encrypting content</option>
+													<option value="no" selected="selected">No, I will encrypt data file myself</option>
+												</select>
+											</div>
+										</div>
+										<div class="control-group">
+											<label class="control-label">Privacy</label>
+											<div class="controls">
+												<select class="span12 dataEntry" id="_item_private">
+													<option value="yes">Yes, hide private items</option>
+													<option value="no" selected="selected">No, show private items</option>
 												</select>
 											</div>
 										</div>
