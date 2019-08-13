@@ -651,11 +651,14 @@
 					$('<span>').attr('style', 'font-size:16px;').append(
 						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 4); }).append("Expired").attr('title', 'Already expired')).append(" "));
 				allTags.append(		
+					$('<span>').attr('style', 'font-size:16px;').append(
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 5); }).append("Inactive").attr('title', 'Marked as inactive')).append(" "));
+				allTags.append(		
 					$('<span>').attr('style', 'font-size:14px;').append(
-						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 5); }).append("Trashed").attr('title', 'Deleted, but can be restored')).append(" "));
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 6); }).append("Trashed").attr('title', 'Deleted, but can be restored')).append(" "));
 				allTags.append(		
 					$('<span>').attr('style', 'font-size:12px;').append(" | ").append(
-						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 6); }).append("(all)").attr('title', 'All except which are trashed')).append(" "));
+						$('<a>').attr('href', '#').on('click', function() { onSearch(null, 7); }).append("(all)").attr('title', 'All except which are trashed')).append(" "));
 				allTags.append("<br /><hr>");
 				
 				//preset variables as to create no confusion
@@ -703,6 +706,11 @@
 				$("#editItemMenuName2").text("Edit");
 				$("#editImage").show(); $("#newImage").hide();
 				$("#editImage2").show(); $("#newImage2").hide();
+				if (isEditingNew) {
+					$("#saveAsNewDataChanges").hide();
+				} else {
+					$("#saveAsNewDataChanges").show();
+				}
 			};
 			function getFixedTitle(title) {
 				var i = title.indexOf("=");
@@ -1378,7 +1386,7 @@
 									);
 				});
 			};
-			function listItems(items, includeTrashed) {
+			function listItems(items, includeTrashedOrInactive) {
 				var data = "", 
 					count = 0;
 				if (isArray(items) && items.length > 0) {
@@ -1389,8 +1397,9 @@
 					var isShow = true;
 					$.each(items, function(index, item) {
 						isShow = true;
-						if (item.trash === "yes" && !includeTrashed) { isShow = false; }
+						if (item.trash === "yes" && !includeTrashedOrInactive) { isShow = false; }
 						if (isShow && item.private === "yes" && spa.data.settings.private === "yes") { isShow = false; }	
+						if (isShow && item.fav === "-" && !includeTrashedOrInactive) { isShow = false; }	
 						if (isShow) {
 							count++;
 							data.append(
@@ -1408,19 +1417,19 @@
 			
 			// properties
 			this.title = "Simple Passwords App";
-			this.version = "0.9.5";
-			this.versionId = 0.95;
-			this.dataFormatVersionId = 1;
-			this.copyright = "&copy; 2013-2016, Vikas Burman. All rights reserved.";
+			this.version = "1.1.0";
+			this.versionId = 1.10;
+			this.dataFormatVersionId = 1.1;
+			this.copyright = "&copy; 2013-2019, Vikas Burman. All rights reserved.";
 			this.tagline = "Simple, smart, secure, and sufficient portable app to store all your passwords.";
 			this.url = "https://github.com/vikasburman/spa";
 			this.newVersionDefinitionUrl = "https://raw.github.com/vikasburman/spa/master/updates.js"; 
 			this.server = {
 				// latest version info (this gets updated by loading a version info file from server)
 				latestVersion: {
-					versionId: 0.95,
+					versionId: 1.10,
 					url: "https://github.com/vikasburman/spa",
-					title: "Version 0.9.5",
+					title: "Version 1.1.0",
 				}
 			};
 			this.settings = {
@@ -1662,7 +1671,7 @@
 				navigate("search", true);
 				
 				if (typeof searchType === 'undefined') {
-					searchType = spa.app.state.searchType; // 0-Default, 1-favorites, 2-uncategorized, 3-Expiring, 4-Expired, 5-Trashed, 6-All, 7-A specific tagged items
+					searchType = spa.app.state.searchType; // 0-Default, 1-favorites, 2-uncategorized, 3-Expiring, 4-Expired, 5-Inactive, 6-Trashed, 7-All, 8-A specific tagged items
 				};
 				
 				// if something is there to search
@@ -1714,15 +1723,19 @@
 						searchText = "expired";
 						$("#searched").val(searchText).css('color', 'red');
 						break;
-					case 5: // trashed
+					case 5: // inactive
+						searchText = "inactive";
+						$("#searched").val(searchText).css('color', 'red');
+						break;
+					case 6: // trashed
 						searchText = "trashed";
 						$("#searched").val(searchText).css('color', 'red');
 						break;
-					case 6: // all
+					case 7: // all
 						searchText = "all";
 						$("#searched").val(searchText).css('color', 'red');
 						break;
-					case 7: // specific tag
+					case 8: // specific tag
 						searchText = $("#searched").val();
 						if (searchText.length === 0) {
 							searchText = spa.app.state.searchText;
@@ -1743,7 +1756,7 @@
 				var items = [];
 				var isMatched = false;
 				var searchLevel = 1; // default
-				var isIncludeTrashed = false;
+				var isIncludeTrashedOrInactive = false;
 				switch(searchType) {
 					case 0: // default
 						switch(spa.app.state.settings.searchDepth) {
@@ -1851,22 +1864,30 @@
 							};
 						});
 						break;	
-					case 5: // trashed
+					case 5: // inactive
+						$.each(spa.data.items, function(i, item) {
+							if (item.fav && item.fav === "-") {
+								items.push(item); 
+							};
+						});
+						isIncludeTrashedOrInactive = true;
+						break;
+					case 6: // trashed
 						$.each(spa.data.items, function(i, item) {
 							if (item.trash === "yes") {
 								items.push(item); 
 							};
 						});
-						isIncludeTrashed = true;
+						isIncludeTrashedOrInactive = true;
 						break;							
-					case 6: // all
+					case 7: // all
 						$.each(spa.data.items, function(i, item) {
 							if (item.trash !== "yes") {
 								items.push(item); 
 							};
 						});
 						break;							
-					case 7: // a specific tag
+					case 8: // a specific tag
 						searchText = searchText.toLowerCase();
 						$.each(spa.data.items, function(i, item) {
 							if (item.tags) {
@@ -1877,7 +1898,7 @@
 						});
 						break;
 				};
-				var theItems = listItems(items, isIncludeTrashed);
+				var theItems = listItems(items, isIncludeTrashedOrInactive);
 				$("#searchContent").empty().append(theItems.data);
 				$("#searchItemsCount").text(theItems.count.toString());
 			};
@@ -1919,7 +1940,7 @@
 				var table = $('<table>').attr('class', 'table table-striped');
 				var itemPwds = null;
 				$.each(spa.data.items, function(index, item) {
-					if (item.trash !== "yes" && !(item.private === "yes" && spa.data.settings.private === "yes")) {
+					if (item.trash !== "yes" && item.fav !== "-" && !(item.private === "yes" && spa.data.settings.private === "yes")) {
 						itemPwds = $('<span>');
 						if (isArray(item.pwds) && item.pwds.length > 0) {
 							var pwd = "";
@@ -2732,12 +2753,21 @@
 					};
 				};
 			};
-			function onSaveData(isDeletedTrashedOrRestored) {
+			function onSaveData(isDeletedTrashedOrRestored, isSaveAsNew) {
 				// validate and load data in object
 				var isSuccess = false;
 				if (isDeletedTrashedOrRestored) {
 					isSuccess = true;
 				} else {
+					// save as new
+					if (isSaveAsNew) {
+						if (!isEditingNew) {
+							isEditingNew = true;
+							newDataId = utils.guid();
+							spa.app.state.editDataId = "";
+						}
+					}
+
 					var item = htmlToDataObject();
 					isSuccess = (item !== null);
 					
@@ -2808,6 +2838,9 @@
 						onHome();
 					};
 				};
+			};
+			function onSaveAsNewData() {
+				return onSaveData(false, true);
 			};
 			function onCancelData() {
 				if (confirm("Discard changes?")) {
@@ -3244,6 +3277,7 @@
 					$("#passwordHistoryLink").on('click', function() { onShowPwdHistory(); });
 				// editItem
 					$("#saveDataChanges").on('click', function() { onSaveData(); });
+					$("#saveAsNewDataChanges").on('click', function() { onSaveAsNewData(); });
 					$("#cancelDataChanges").on('click', function() { onCancelData(); });
 					$("#newPwdLink").on('click', function() { onNewPwd(); });
 				// settings
@@ -3646,6 +3680,7 @@
 					<div class="btn-group pull-right">
 					  <button id="saveDataChanges" class="btn btn-large btn-success" title="Save data changes in data file">Save</button>
 					  <button id="cancelDataChanges" class="btn btn-large">Cancel</button>
+					  <button id="saveAsNewDataChanges" style="margin-left: 10px;" class="btn btn-large btn-primary" title="Save data changes as new item in data file">Save As New</button>
 					</div>
 					<br /><br /><br />
 					<div class="editDataContent">
@@ -3664,6 +3699,7 @@
 											<select type="text" class="span3 dataEntry" id="_fav">
 												<option value="no"></option>
 												<option value="yes">Favorite</option>
+												<option value="-">Inactive</option>
 											</select>
 											<select type="text" class="span3 dataEntry" id="_private">
 												<option value="no"></option>
