@@ -1,0 +1,6 @@
+nohup.out
+.DS_Store
+spa
+spa/**/*
+spa.app
+spa.app/**/*
