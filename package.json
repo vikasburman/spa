@@ -1,7 +1,7 @@
 {
   "name": "spa",
   "description": "Simple Passwords App",
-  "version": "0.9.5",
+  "version": "2.2.0",
   "main": "spa.html",
   "window": {
     "title": "Simple Passwords App",
@@ -13,5 +13,5 @@
     "position": "center",
     "min_width": 700,
     "min_height": 400
-  }  
+  }
 }
